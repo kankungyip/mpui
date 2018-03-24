@@ -23,7 +23,6 @@ $ yarn example
 用[微信web开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)打开`weui-mpvue`项目目录。
 
 ## 使用
-
 ### 引入全局样式
 
 ```vue
@@ -32,18 +31,26 @@ $ yarn example
 </style>
 ```
 
-### 引用组件
+### 使用组件
 
 ```vue
+<template>
+  <ui-button text="按钮" />
+</template>
+
 <script>
 import uiButton 'weui-mpvue/components/button'
+
+export default {
+  components: {
+    uiBUtton
+  }
+}
 </script>
 ```
 
 ## 组件
-
 ### WeUI 重构状态
-
 #### 表单
 
 - [x] `Button`（_未完全组件化_：`.weui-btn-area`）
