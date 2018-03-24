@@ -62,7 +62,7 @@ export default {
 #### 基础组件
 
 - [ ] `Article`
-- [ ] `Badge`
+- [x] `Badge` (添加`.weui-badge-box`样式，_未完全组件化_)
 - [x] `Flex`（_未组件化_）
 - [x] `Footer`
 - [x] `Gallery`
@@ -93,6 +93,8 @@ export default {
 ### 组件新特性
 
 - `Button` 添加图标
+- `List` 添加多种徽章显示样式
+- `Badge` 自定义显示最大值，超过最大值显示 max+
 - `Grid` 自定义列数
 - `Icons` 自定义图标，使用 iconfont.cn 图标
 
