@@ -6,11 +6,12 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 
-*.wxss
 build/
 config/
 example/
 static/
+project.config.json
+*.wxss
 
 # Editor directories and files
 .idea
