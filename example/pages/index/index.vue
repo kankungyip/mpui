@@ -36,7 +36,7 @@
               >
               <ui-cell
                 v-for="(page, pageIndex) in item.pages"
-                inline
+                inside
                 type="access"
                 :title="page"
                 :navigate-to="'/pages/' + page + '/' + page"

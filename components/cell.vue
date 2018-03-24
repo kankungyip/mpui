@@ -4,7 +4,7 @@
       'weui-cell': true,
       'weui-cell_link': link,
       'weui-access': access,
-      'inline': inline
+      'inside': inside
     }"
     :hover-class="access ? 'weui-cell_active': ''"
     @click="click"
@@ -54,7 +54,7 @@ export default {
     imageWidth:       { type: Number,     default: 20 },
     imageHeight:      { type: Number,     default: 20 },
     navigateTo:       { type: String,     default: '' },
-    inline:           { type: Boolean,    default: false },
+    inside:           { type: Boolean,    default: false },
     badgePosition:    { type: String,     default: 'title' },
     badgeValue:       { type: String,     default: '' },
     badgeMax:         { type: Number,     default: 99 },
@@ -141,7 +141,7 @@ export default {
   vertical-align: middle;
 }
 
-.inline:before {
+.inside:before {
   right: 15px;
 }
 </style>
