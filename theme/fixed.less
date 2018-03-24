@@ -1,0 +1,44 @@
+/*
+ *  因为 mpvue 对于 vue 组件暂不支持 Slot，
+ *  所以部分组件以全局样式的形式提供支持。
+ */
+@import "base/fn.less";
+
+// flex
+.weui-flex {
+  display: flex;
+}
+.weui-flex__item{
+  flex: 1;
+}
+
+// cells
+.weui-cells {
+  position: relative;
+  margin-top: @weuiCellsMarginTop;
+  background-color: @weuiCellBg;
+  line-height: @weuiCellLineHeight;
+  font-size: @weuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+  &:before {
+    .setTopLine(@weuiCellBorderColor);
+  }
+  &:after {
+    .setBottomLine(@weuiCellBorderColor);
+  }
+}
+.weui-cells__title {
+  margin-top: .77em; // 15px - 行高
+  margin-bottom: .3em; // 8px - 行高
+  padding-left: @weuiCellGapH;
+  padding-right: @weuiCellGapH;
+  color: @weuiTextColorGray;
+  font-size: @weuiCellTipsFontSize;
+}
+.weui-cells_after-title{
+  margin-top: 0;
+}
+
+// button
+.weui-btn-area{
+  margin: @weuiCellsMarginTop @weuiBtnDefaultGap .3em;
+}
