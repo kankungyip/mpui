@@ -55,7 +55,7 @@ export default {
 
 - [x] `Button`（_未完全组件化_：`.weui-btn-area`）
 - [ ] `Input`
-- [x] `List`（_未完全组件化_：`.weui-cells`、`.weui-cells__title`、`.weui-cells_after-title`）
+- [x] `List`（_未完全组件化_：`.weui-cells`、`.weui-cells__title`、`.weui-cells_after-title`、`.weui-cells__tips`）
 - [x] `Slider`
 - [ ] `Uploader`
 
