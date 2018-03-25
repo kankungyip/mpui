@@ -69,7 +69,7 @@ export default {
 - [x] `Grid`
 - [x] `Icons`
 - [x] `Loadmore`
-- [x] `Panel`（_未组件化_，包含`MediaBox`组件）
+- [x] `Panel`（_未组件化_，含`MediaBox`组件，建议搭配`Panel`使用）
 - [x] `Preview`
 - [x] `Progress`
 

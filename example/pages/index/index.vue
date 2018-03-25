@@ -80,7 +80,7 @@ export default {
           id: 'widget',
           name: '基础组件',
           open: false,
-          pages: ['article*', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel*', 'preview', 'progress'],
+          pages: ['article*', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'progress'],
         },
         {
           id: 'feedback',
