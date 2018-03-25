@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="page">
 
     <div class="page__hd">
       <div class="page__title">Grid</div>
