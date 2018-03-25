@@ -3,10 +3,10 @@
     class="weui-cell"
     :class="{
       'weui-cell_link': type === 'link',
-      'weui-access': showAccess,
+      'weui-cell-access': showAccess,
       'inside': inside
     }"
-    :hover-class="showAccess ? 'weui-cell_active': ''"
+    :hover-class="showActive || showAccess ? 'weui-cell_active': ''"
     @click="click"
     >
       <div
@@ -23,17 +23,12 @@
           {{badgeText}}
           </div>
       </div>
-      <div class="weui-cell__bd">
-        <div>
-          <div class="vertical-align-middle">{{title}}</div>
-          <div v-if="badgePosition === 'title' && badgeText" class="weui-badge">{{badgeText}}</div>
-        </div>
+      <div class="weui-cell__bd" :class="{ 'weui-cell_primary': image }">
+        <div class="vertical-align-middle">{{title}}</div>
+        <div v-if="badgePosition === 'title' && badgeText" class="weui-badge">{{badgeText}}</div>
         <div v-if="subtitle && type !== 'link'" class="subtitle">{{subtitle}}</div>
       </div>
-      <div
-        class="weui-cell__ft"
-        :class="{ 'weui-cell__ft_in-access': showAccess }"
-        >
+      <div class="weui-cell__ft" :class="{ 'weui-cell__ft_in-access': showAccess }">
         <div v-if="type !== 'link'" class="vertical-align-middle">{{extra}}</div>
         <div v-if="badgePosition === 'extra'" class="weui-badge weui-badge_dot" />
       </div>
@@ -55,6 +50,7 @@ export default {
     badgePosition:    { type: String,     default: 'title' },
     badgeValue:       { type: String,     default: '' },
     badgeMax:         { type: Number,     default: 99 },
+    showActive:       { type: Boolean,    default: false },
     showAccess:       { type: Boolean,    default: false },
   },
 
