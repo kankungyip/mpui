@@ -20,20 +20,20 @@
 
       <div class="weui-cells__title">带跳转的列表项</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-cell type="access" title="标题文字" />
-        <ui-cell type="access" title="标题文字" />
+        <ui-cell title="标题文字" show-access />
+        <ui-cell title="标题文字" show-access />
       </div>
 
       <div class="weui-cells__title">带说明、跳转的列表项</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-cell type="access" title="标题文字" extra="说明文字" />
-        <ui-cell type="access" title="标题文字" extra="说明文字" />
+        <ui-cell title="标题文字" extra="说明文字" show-access />
+        <ui-cell title="标题文字" extra="说明文字" show-access />
       </div>
 
       <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-cell type="access" title="标题文字" extra="说明文字" :image="icon" />
-        <ui-cell type="access" title="标题文字" extra="说明文字" :image="icon" />
+        <ui-cell title="标题文字" extra="说明文字" show-access :image="icon" />
+        <ui-cell title="标题文字" extra="说明文字" show-access :image="icon" />
       </div>
     </div>
 

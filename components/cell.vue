@@ -1,16 +1,16 @@
 <template>
   <div
+    class="weui-cell"
     :class="{
-      'weui-cell': true,
-      'weui-cell_link': link,
-      'weui-access': access,
+      'weui-cell_link': type === 'link',
+      'weui-access': showAccess,
       'inside': inside
     }"
-    :hover-class="access ? 'weui-cell_active': ''"
+    :hover-class="showAccess ? 'weui-cell_active': ''"
     @click="click"
     >
       <div
-        v-if="image"
+        v-if="image && type !== 'link'"
         class="weui-cell__hd"
         :class="{ 'weui-badge-box': (badgePosition === 'image' && badgeText) || badgePosition === 'image-dot' }"
         >
@@ -28,16 +28,13 @@
           <div class="vertical-align-middle">{{title}}</div>
           <div v-if="badgePosition === 'title' && badgeText" class="weui-badge">{{badgeText}}</div>
         </div>
-        <div v-if="subtitle" class="subtitle">{{subtitle}}</div>
+        <div v-if="subtitle && type !== 'link'" class="subtitle">{{subtitle}}</div>
       </div>
       <div
-        v-if="!link"
-        :class="{
-          'weui-cell__ft': true,
-          'weui-cell__ft_in-access': access
-        }"
+        class="weui-cell__ft"
+        :class="{ 'weui-cell__ft_in-access': showAccess }"
         >
-        <div class="vertical-align-middle">{{extra}}</div>
+        <div v-if="type !== 'link'" class="vertical-align-middle">{{extra}}</div>
         <div v-if="badgePosition === 'extra'" class="weui-badge weui-badge_dot" />
       </div>
   </div>
@@ -58,17 +55,10 @@ export default {
     badgePosition:    { type: String,     default: 'title' },
     badgeValue:       { type: String,     default: '' },
     badgeMax:         { type: Number,     default: 99 },
+    showAccess:       { type: Boolean,    default: false },
   },
 
   computed: {
-    link () {
-      return this.type === 'link'
-    },
-
-    access () {
-      return this.type === 'access'
-    },
-
     imageStyled () {
       const styles = []
       styles.push(`width: ${this.imageWidth}px`)
