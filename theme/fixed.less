@@ -2,15 +2,9 @@
  *  因为 mpvue 对于 vue 组件暂不支持 Slot，
  *  所以部分组件以全局样式的形式提供支持。
  */
-@import "base/fn.less";
-
-// flex
-.weui-flex {
-  display: flex;
-}
-.weui-flex__item{
-  flex: 1;
-}
+@import "base/fn";
+@import "widget/weui-flex/weui-flex";
+@import "widget/weui-panel/weui-panel";
 
 // cells
 .weui-cells {
@@ -49,40 +43,5 @@
 // button
 .weui-btn-area{
   margin: @weuiCellsMarginTop @weuiBtnDefaultGap .3em;
-}
-
-// badge
-.weui-badge-box {
-  display: inline-block;
-  position: relative;
-}
-
-// panel
-.weui-panel {
-    background-color: #FFFFFF;
-    margin-top: 10px;
-    &:first-child {
-        margin-top: 0;
-    }
-
-    position: relative;
-    overflow: hidden;
-    &:before {
-        .setTopLine(@weuiLineColorLight);
-    }
-    &:after {
-        .setBottomLine(@weuiLineColorLight);
-    }
-}
-
-.weui-panel__hd {
-    padding: 14px 15px 10px;
-    color: @weuiTextColorGray;
-    font-size: 13px;
-    position: relative;
-    &:after {
-        .setBottomLine(@weuiLineColorLight);
-        left: 15px;
-    }
 }
 
