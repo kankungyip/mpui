@@ -1,5 +1,5 @@
 <template>
-  <div class="searchbar-box">
+  <div class="searchbar-box" :class="{ 'searchbar-fixed-top': fixedTop }">
 
     <div v-if="focus && results.length > 0" class="weui-cells searchbar-result">
       <ui-cell
@@ -58,8 +58,9 @@ export default {
   },
 
   props: {
-    defaultValue:   { type: String, default: '' },
-    placeholder:    { type: String, default: '搜素' },
+    defaultValue:   { type: String,     default: '' },
+    placeholder:    { type: String,     default: '搜索' },
+    fixedTop:       { type: Boolean,    default: false },
   },
 
   methods: {
@@ -110,6 +111,12 @@ export default {
 
 .searchbar-box {
   position: relative;
+}
+
+.searchbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .searchbar-result {
