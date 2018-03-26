@@ -106,7 +106,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 
 ### 搜索相关
 
-- [ ] `SearchBar`
+- [x] `SearchBar`
 
 ## 新特性
 
@@ -116,6 +116,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 - `Badge` 支持自定义显示最大值，超过最大值显示 max+
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
+- `SearchBar` 实时查询结果反馈
 
 ## 计划
 
