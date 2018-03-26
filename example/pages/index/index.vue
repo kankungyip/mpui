@@ -37,7 +37,7 @@
               <ui-cell
                 v-for="(page, pageIndex) in item.pages"
                 inside
-                type="access"
+                show-access
                 :title="page"
                 :navigate-to="'/pages/' + page + '/' + page"
                 :key="pageIndex"
@@ -71,6 +71,12 @@ export default {
     return {
       list: [
         {
+          id: 'special',
+          name: '新组件',
+          open: false,
+          pages: ['avatar*', 'ellipsis*', 'tag*', 'price*', 'counter*', 'countdown*', 'steps*', 'noticebar*', 'toptips*'],
+        },
+        {
           id: 'form',
           name: '表单',
           open: false,
@@ -80,7 +86,7 @@ export default {
           id: 'widget',
           name: '基础组件',
           open: false,
-          pages: ['article*', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'mediabox', 'preview', 'progress'],
+          pages: ['article*', 'badge', 'flex*', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel*', 'mediabox', 'preview', 'progress'],
         },
         {
           id: 'feedback',
@@ -107,11 +113,9 @@ export default {
   methods: {
     kindToggle (id) {
       const list = this.list
-
       for (let i = 0, len = list.length; i < len; ++i) {
         list[i].open = list[i].id === id ? !list[i].open : false
       }
-
       this.list = list
     },
   },
