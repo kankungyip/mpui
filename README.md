@@ -64,7 +64,8 @@ export default {
 - [ ] `Countdown`
 - [ ] `Steps`
 - [ ] `NoticeBar`
-- [ ] `Toptips`
+- [x] `Toptips`(从原 WeUI 的 `Input` 样式中独立出来，并增加多种配色）
+- [x] `MediaBox` (从原 WeUI 的 `Panel` 样式中独立出来，建议搭配 `Panel` 使用）
 
 _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。*_
 
@@ -87,7 +88,6 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 - [x] `Icons`
 - [x] `Loadmore`
 - [ ] `Panel`（_未组件化_，需要 Slot 支持）
-- [x] `MediaBox` (建议搭配 `Panel` 使用）
 - [x] `Preview`
 - [x] `Progress`
 
@@ -118,6 +118,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
 - `SearchBar` 实时查询结果反馈
 - `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
+- `Toptips` 引入独立 API `vm.$toptips`
 
 ## 计划
 

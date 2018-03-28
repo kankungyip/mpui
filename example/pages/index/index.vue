@@ -74,7 +74,7 @@ export default {
           id: 'special',
           name: '新组件',
           open: false,
-          pages: ['avatar*', 'ellipsis*', 'tag*', 'price*', 'counter*', 'countdown*', 'steps*', 'noticebar*', 'toptips*'],
+          pages: ['avatar*', 'ellipsis*', 'tag*', 'price*', 'counter*', 'countdown*', 'steps*', 'noticebar*', 'toptips', 'mediabox'],
         },
         {
           id: 'form',
@@ -86,7 +86,7 @@ export default {
           id: 'widget',
           name: '基础组件',
           open: false,
-          pages: ['article*', 'badge', 'flex*', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel*', 'mediabox', 'preview', 'progress'],
+          pages: ['article*', 'badge', 'flex*', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel*', 'preview', 'progress'],
         },
         {
           id: 'feedback',
