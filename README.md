@@ -74,7 +74,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 - [ ] `Input`
 - [x] `List`（_未完全组件化_，需要 Slot 支持：`.weui-cells`、`.weui-cells__title`、`.weui-cells_after-title`、`.weui-cells__tips`）
 - [x] `Slider`
-- [ ] `Uploader`
+- [x] `Uploader`
 
 ### 基础组件
 
@@ -117,6 +117,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
 - `SearchBar` 实时查询结果反馈
+- `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
 
 ## 计划
 
