@@ -15,41 +15,42 @@
 */
 
 @import "weui-font";
+@import "../base/fn";
 
 .weui-icon:before {
   margin: 0;
 }
 .weui-icon-success {
   font-size: 23px;
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 .weui-icon-waiting {
   font-size: 23px;
-  color: #10AEFF;
+  color: @weuiColorInfo;
 }
 .weui-icon-warn {
   font-size: 23px;
-  color: #F43530;
+  color: @weuiColorWarn; // #F43530;
 }
 .weui-icon-info {
   font-size: 23px;
-  color: #10AEFF;
+  color: @weuiColorInfo;
 }
 
 .weui-icon-success-circle,
 .weui-icon-success_circle {
   font-size: 23px;
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 .weui-icon-success-no-circle,
 .weui-icon-success_no_circle {
   font-size: 23px;
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 .weui-icon-waiting-circle,
 .weui-icon-waiting_circle {
   font-size: 23px;
-  color: #10AEFF;
+  color: @weuiColorInfo;
 }
 .weui-icon-circle {
   font-size: 23px;
@@ -57,26 +58,26 @@
 }
 .weui-icon-download {
   font-size: 23px;
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 
 .weui-icon-info-circle,
 .weui-icon-info_circle {
   font-size: 23px;
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 
 .weui-icon-safe-success,
 .weui-icon-safe_success {
-  color: #09BB07;
+  color: @weuiColorPrimary;
 }
 .weui-icon-safe-warn,
 .weui-icon-safe_warn {
-  color: #FFBE00;
+  color: @weuiColorSafeWarn;
 }
 
 .weui-icon-cancel {
-  color: #F43530;
+  color: @weuiColorWarn; // #F43530;
   font-size: 22px;
 }
 
@@ -106,6 +107,6 @@
 .weui-icon_msg-primary {
   font-size: 93px;
   &.weui-icon-warn {
-    color: #FFBE00;
+    color: @weuiColorSafeWarn;
   }
 }
