@@ -32,7 +32,9 @@
         </div>
         <label class="weui-search-bar__label" :hidden="focus" @click="show">
           <icon class="weui-icon-search" type="search" size="14"></icon>
-          <div class="weui-search-bar__text">{{defaultValue || value || placeholder}}</div>
+          <div class="weui-search-bar__text" :class="{ 'primary-text': defaultValue }">
+            {{defaultValue || value || placeholder}}
+          </div>
         </label>
       </div>
       <div class="weui-search-bar__cancel-btn" :hidden="!focus" @click="cancel">取消</div>
@@ -49,18 +51,18 @@ export default {
     uiCell,
   },
 
+  props: {
+    defaultValue:   { type: String,     default: '' },
+    placeholder:    { type: String,     default: '搜索' },
+    fixedTop:       { type: Boolean,    default: false },
+  },
+
   data () {
     return {
       focus: false,
       value: '',
       results: [],
     }
-  },
-
-  props: {
-    defaultValue:   { type: String,     default: '' },
-    placeholder:    { type: String,     default: '搜索' },
-    fixedTop:       { type: Boolean,    default: false },
   },
 
   methods: {
@@ -107,6 +109,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../theme/base/fn";
 @import "../theme/widget/weui-searchbar/weui-searchbar";
 
 .searchbar-box {
@@ -117,6 +120,10 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.primary-text {
+  color: @weuiColorPrimary;
 }
 
 .searchbar-result {
