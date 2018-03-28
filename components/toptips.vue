@@ -7,7 +7,6 @@
       'toptips-display': !hidden,
       'toptips-animation': animation,
     }"
-    :style="'background-color: ' + color + ' !important'"
     >
     <span>{{text}}</span>
   </div>
@@ -29,13 +28,11 @@ const hide = () => {
 const show = ({
   type = 'default',
   text = '',
-  color = '',
   duration = 3,
 } = {}) => {
   clearTimeout(timer)
   ref.type = type
   ref.text = text
-  ref.color = color
   ref.hidden = false
   ref.animation = true
   if (duration) {
@@ -43,23 +40,16 @@ const show = ({
   }
 }
 
-Vue.prototype.$toptips = { show, hide }
+Vue.prototype['$toptips'] = { show, hide }
 
 export default {
   data () {
     return {
       type: 'default',
       text: '',
-      color: '',
       hidden: true,
       animation: false,
     }
-  },
-
-  computed: {
-    styled () {
-      return `background-color: ${this.color} !important;`
-    },
   },
 
   created () {

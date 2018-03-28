@@ -64,7 +64,7 @@ export default {
 - [ ] `Countdown`
 - [ ] `Steps`
 - [ ] `NoticeBar`
-- [x] `Toptips`(从原 WeUI 的 `Input` 样式中独立出来，并增加多种配色）
+- [x] `Toptips` (从原 WeUI 的 `Input` 样式中独立出来，并增加多种配色）
 - [x] `MediaBox` (从原 WeUI 的 `Panel` 样式中独立出来，建议搭配 `Panel` 使用）
 
 _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。*_
