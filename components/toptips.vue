@@ -15,14 +15,11 @@
 <script>
 import Vue from 'vue'
 
-const ANIMATION_DURATION = 0.3
-
 let ref, timer
 
 const hide = () => {
-  ref.hidden = true
   clearTimeout(timer)
-  timer = setTimeout(() => ref.animation = false, ANIMATION_DURATION * 1000)
+  ref.hidden = true
 }
 
 const show = ({
@@ -48,7 +45,7 @@ export default {
       type: 'default',
       text: '',
       hidden: true,
-      animation: false,
+      animation: false, // 进入的时候不会有消失的动画残影
     }
   },
 
@@ -57,6 +54,9 @@ export default {
   },
 
   onUnload () {
+    // 保证小程序退出后再次进入时不会残留之前的显示
+    // 同时初始化动画选项，保证再次进入时不会有动画残影
+    ref.animation = false
     hide()
   },
 }
@@ -65,8 +65,6 @@ export default {
 <style lang="less" scoped>
 @import "../theme/base/fn";
 @import "../theme/widget/weui-cell/weui-form/weui-form_common";
-
-@ANIMATION_DURATION: .3s;
 
 .weui-toptips {
   background-color: @weuiColorInfo;
@@ -88,7 +86,6 @@ export default {
 }
 
 .toptips-animation {
-  // ANIMATION_DURATION
-  transition: transform @ANIMATION_DURATION ease, opacity @ANIMATION_DURATION ease;
+  transition: transform .3s ease, opacity .3s ease;
 }
 </style>
