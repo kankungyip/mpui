@@ -13,7 +13,7 @@
       <div class="blank-line" />
       <ui-progress active show-info percent="80" active-color="#10aeff" />
       <div class="blank-line" />
-      <ui-progress show-cancel :percent="progress" @cancel="cancel" />
+      <ui-progress show-cancel :percent.sync="progress" @cancel="cancel" />
       <div class="blank-line" />
       <ui-button text="进度开始" :disabled="disabled" @click="start" />
     </div>
@@ -23,10 +23,12 @@
 
 <script>
 import uiProgress from '../../../components/progress'
+import uiButton from '../../../components/button'
 
 export default {
   components: {
     uiProgress,
+    uiButton,
   },
 
   data () {

@@ -45,6 +45,7 @@ export default {
 
   methods: {
     cancel (...args) {
+      this.$emit('update:percent', 0)
       this.$emit('cancel', ...args)
     },
   },
