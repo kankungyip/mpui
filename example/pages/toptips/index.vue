@@ -60,4 +60,7 @@ export default {
 </script>
 
 <style>
+page {
+  background-color: #fff;
+}
 </style>

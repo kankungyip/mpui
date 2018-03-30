@@ -8,7 +8,7 @@
       'toptips-animation': animation,
     }"
     >
-    <span>{{text}}</span>
+    {{text}}
   </div>
 </template>
 
@@ -63,6 +63,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.toptips-display {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.toptips-animation {
+  transition: transform .3s ease, opacity .3s ease;
+}
+</style>
+
+<style lang="less">
 @import "../theme/base/fn";
 @import "../theme/widget/weui-cell/weui-form/weui-form_common";
 
@@ -78,14 +89,5 @@ export default {
 
 .weui-toptips_warn {
   background-color: @weuiColorWarn;
-}
-
-.toptips-display {
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-}
-
-.toptips-animation {
-  transition: transform .3s ease, opacity .3s ease;
 }
 </style>

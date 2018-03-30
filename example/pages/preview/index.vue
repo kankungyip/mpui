@@ -16,7 +16,7 @@
         :confirm-text="item.confirmText"
         :cancel-text="item.cancelText"
         @confirm="confirm"
-        @cancel="confirm"
+        @cancel="cancel"
         />
     </div>
 
@@ -36,7 +36,7 @@ export default {
       items: [
         {
           title: '付款金额',
-          value: '¥2400.00',
+          extra: '¥2400.00',
           detail: [
             {
               label: '商品',
@@ -55,7 +55,7 @@ export default {
         },
         {
           title: '付款金额',
-          value: '¥2400.00',
+          extra: '¥2400.00',
           detail: [
             {
               label: '商品',
@@ -79,17 +79,11 @@ export default {
 
   methods: {
     confirm () {
-      wx.showToast({
-        title: '推荐操作',
-        icon: 'none',
-      })
+      console.log('点击操作')
     },
 
     cancel () {
-      wx.showToast({
-        title: '辅助操作',
-        icon: 'none',
-      })
+      console.log('点击辅助操作')
     },
   },
 }

@@ -2,8 +2,8 @@
   <div class="page">
 
     <div class="page__hd">
-      <div class="page__title">List</div>
-      <div class="page__desc">列表</div>
+      <div class="page__title">Cell</div>
+      <div class="page__desc">列表项</div>
     </div>
 
     <div class="page__bd">

@@ -2,8 +2,18 @@
 @import "base/reset";
 @import "fixed";
 
-// badge
+// new style: badge-box
 .weui-badge-box {
   display: inline-block;
   position: relative;
+
+  .weui-badge {
+    position: absolute;
+    top: -.6em;
+    right: -.8em;
+
+    &.weui-badge_dot {
+      top: -.4em;
+    }
+  }
 }

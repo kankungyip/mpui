@@ -180,9 +180,11 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../theme/widget/weui-button/weui-button";
+</style>
 
+<style lang="less" scoped>
 .image {
   margin-right: 5px;
   vertical-align: middle;

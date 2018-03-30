@@ -21,10 +21,10 @@
 import uiSearchbar from '../../../components/searchbar'
 
 const RESULTS = [
-  { label: 'abc' },
-  { label: 'abcd' },
-  { label: 'abdef' },
-  { label: 'abefg' },
+  { label: 'abc', value: 'abc' },
+  { label: 'abcd', value: 'abcd' },
+  { label: 'abdef', value: 'abdef' },
+  { label: 'abefg', value: 'abefg' },
 ]
 
 export default {
@@ -34,10 +34,7 @@ export default {
 
   methods: {
     confirm (value) {
-      wx.showToast({
-        title: value,
-        icon: 'none',
-      })
+      console.log(`提交 ${value}`)
     },
 
     realtimeResults (value, resolve) {
@@ -52,10 +49,7 @@ export default {
     },
 
     resultClick (result) {
-      wx.showToast({
-        title: result.label,
-        icon: 'none',
-      })
+      console.log(`点击 ${result.label}`)
     },
   },
 }

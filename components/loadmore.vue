@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../theme/widget/weui-loading/weui-loading";
 @import "../theme/widget/weui-tips/weui-loadmore";
 </style>

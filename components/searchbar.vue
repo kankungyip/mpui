@@ -1,7 +1,7 @@
 <template>
   <div class="searchbar-box" :class="{ 'searchbar-fixed-top': fixedTop }">
 
-    <div v-if="focus && results.length > 0" class="weui-cells searchbar-result">
+    <div v-if="focus && results.length > 0" class="weui-cells weui-searchbar-result-cells">
       <ui-cell
         v-for="(item, index) in results"
         show-active
@@ -23,7 +23,6 @@
             :value="value"
             :focus="focus"
             @input="typing"
-            @blur="blur"
             @confirm="search"
             />
           <div v-if="value.length > 0" class="weui-icon-clear" @click="clear">
@@ -72,37 +71,29 @@ export default {
     },
 
     clear () {
-      clearTimeout(this.timer)
       this.value = ''
       this.$emit('realtime-results', '', (results = []) => this.results = results)
     },
 
     show () {
-      clearTimeout(this.timer)
       this.focus = true
     },
 
-    blur () {
-      this.timer = setTimeout(() => this.focus = false, 150)
-    },
-
     cancel () {
-      clearTimeout(this.timer)
       this.focus = false
     },
 
     search () {
-      clearTimeout(this.timer)
       this.focus = false
       this.$emit('confirm', this.value || this.defaultValue)
     },
 
     resultClick (result) {
-      clearTimeout(this.timer)
       this.focus = false
       this.value = result.label
       this.results = [].concat(result)
-      this.$emit('resultClick', result)
+      this.$emit('result-click', result)
+      this.$emit('confirm', result.value)
     }
   },
 }
@@ -110,7 +101,6 @@ export default {
 
 <style lang="less" scoped>
 @import "../theme/base/fn";
-@import "../theme/widget/weui-searchbar/weui-searchbar";
 
 .searchbar-box {
   position: relative;
@@ -125,17 +115,21 @@ export default {
 .primary-text {
   color: @weuiColorPrimary;
 }
+</style>
 
-.searchbar-result {
+<style lang="less">
+@import "../theme/widget/weui-searchbar/weui-searchbar";
+
+.weui-searchbar-result-cells {
   position: absolute;
   top: @weuiSearchBarHeight + 16px;
   font-size: 14px;
   width: 100%;
   margin-top: 0;
   padding-top: 0;
-}
 
-.searchbar-result:before {
-  display: none;
+  &:before {
+    display: none;
+  }
 }
 </style>

@@ -29,6 +29,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../theme/widget/weui-footer/weui-footer";
 </style>

@@ -9,13 +9,12 @@
     <div class="page__bd">
       <div class="weui-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-cell type="access" title="单行列表" extra="详细信息" badge-position="extra" />
+        <ui-cell title="单行列表" extra="详细信息" badge-position="extra" show-access />
       </div>
 
       <div class="weui-cells__title">未读数红点跟在主题信息后，统一在列表左侧</div>
       <div class="weui-cells weui-cells_after-title">
         <ui-cell
-          type="access"
           title="联系人名称"
           subtitle="摘要信息"
           image="/static/images/pic_160.png"
@@ -23,25 +22,26 @@
           image-height="50"
           badge-position="image"
           badge-value="8"
+          show-access
           />
         <ui-cell
-          type="access"
           title="单行列表"
           badge-position="title"
           badge-value="8"
+          show-access
           />
         <ui-cell
-          type="access"
           title="单行列表"
           extra="详细信息"
           badge-position="title"
           badge-value="8"
+          show-access
           />
         <ui-cell
-          type="access"
           title="单行列表"
           badge-position="title"
           badge-value="NEW"
+          show-access
           />
       </div>
 
@@ -61,7 +61,7 @@
         <div class="weui-flex__item center">
           <div class="weui-badge-box">
             <img src="/static/images/pic_160.png" style="width:50px;height:50px" />
-            <ui-badge dot />
+            <ui-badge show-dot />
           </div>
         </div>
         <div class="weui-flex__item center">

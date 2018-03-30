@@ -1,8 +1,8 @@
 <template>
   <div
-    v-if="text"
+    v-if="text || showDot"
     class="weui-badge"
-    :class="{ 'weui-badge_dot': dot }"
+    :class="{ 'weui-badge_dot': showDot }"
     >
     {{text}}
   </div>
@@ -11,14 +11,14 @@
 <script>
 export default {
   props: {
-    value:    { type: String,     default: '' },
-    max:      { type: Number,     default: 999 },
-    dot:      { type: Boolean,    default: false },
+    value:      { type: String,     default: '' },
+    max:        { type: Number,     default: 999 },
+    showDot:    { type: Boolean,    default: false },
   },
 
   computed: {
     text () {
-      if (this.dot) {
+      if (this.showDot) {
         return ''
       }
       return +this.value > this.max ? `${this.max}+` : this.value
@@ -27,16 +27,15 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../theme/widget/weui-tips/weui-badge";
 
 .weui-badge {
-  position: absolute;
-  top: -.6em;
-  right: -.8em;
+  margin-left: 5px;
+  vertical-align: middle;
 
   &.weui-badge_dot {
-    top: -.4em;
+    margin-right: 5px;
   }
 }
 </style>

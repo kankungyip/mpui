@@ -11,11 +11,8 @@
         <div v-for="(item, index) in list" class="kind-list__item" :key="index">
 
           <div
-            :class="{
-              'weui-flex': true,
-              'kind-list__item-hd': true,
-              'kind-list__item-hd_show': item.open,
-            }"
+            class="weui-flex kind-list__item-hd"
+            :class="{ 'kind-list__item-hd_show': item.open }"
             @click="kindToggle(item.id)"
             >
             <div class="weui-flex__item">{{item.name}}</div>
@@ -23,17 +20,10 @@
           </div>
 
           <div
-            :class="{
-              'kind-list__item-bd': true,
-              'kind-list__item-bd_show': item.open,
-            }"
+            class="kind-list__item-bd"
+            :class="{ 'kind-list__item-bd_show': item.open }"
             >
-            <div
-              :class="{
-                'weui-cells': true,
-                'weui-cells_show': item.open,
-              }"
-              >
+            <div class="weui-cells" :class="{ 'weui-cells_show': item.open }">
               <ui-cell
                 v-for="(page, pageIndex) in item.pages"
                 inside
@@ -74,31 +64,78 @@ export default {
           id: 'special',
           name: '新组件',
           open: false,
-          pages: ['avatar*', 'ellipsis*', 'tag*', 'price*', 'counter*', 'countdown*', 'steps*', 'noticebar*', 'toptips', 'mediabox'],
+          pages: [
+            'avatar*',
+            'countdown*',
+            'counter*',
+            'ellipsis*',
+            'noticebar*',
+            'price*',
+            'steps*',
+            'tag*',
+          ],
         },
         {
           id: 'form',
           name: '表单',
           open: false,
-          pages: ['button', 'list', 'input*', 'slider', 'uploader'],
+          pages: [
+            'agree*',
+            'button',
+            'buttonarea*',
+            'counter*',
+            'list*',
+            'cell',
+            'input*',
+            'checkboxgroup*',
+            'radiogroup*',
+            'select*',
+            'switch*',
+            'uploader',
+          ],
         },
         {
           id: 'widget',
           name: '基础组件',
           open: false,
-          pages: ['article*', 'badge', 'flex*', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel*', 'preview', 'progress'],
+          pages: [
+            'avatar*',
+            'article*',
+            'badge',
+            'badgebox*',
+            'countdown*',
+            'ellipsis*',
+            'flex*',
+            'footer',
+            'grid',
+            'icons',
+            'loadmore',
+            'panel*',
+            'mediabox',
+            'preview',
+            'price*',
+            'progress',
+            'tag*',
+          ],
         },
         {
           id: 'feedback',
           name: '操作反馈',
           open: false,
-          pages: ['actionsheet', 'dialog', 'msg', 'picker', 'toast'],
+          pages: [
+            'msg',
+            'noticebar*',
+            'toptips',
+          ],
         },
         {
           id: 'nav',
           name: '导航相关',
           open: false,
-          pages: ['navbar*', 'tabbar'],
+          pages: [
+            'tabs*',
+            'steps*',
+          ],
         },
         {
           id: 'search',

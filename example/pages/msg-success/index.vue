@@ -34,17 +34,11 @@ export default {
 
   methods: {
     confirm () {
-      wx.showToast({
-        title: '推荐操作',
-        icon: 'none',
-      })
+      console.log('点击推荐操作')
     },
 
     cancel () {
-      wx.showToast({
-        title: '辅助操作',
-        icon: 'none',
-      })
+      console.log('点击辅助操作')
     },
   },
 }

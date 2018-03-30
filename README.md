@@ -20,7 +20,7 @@ $ yarn add weui-mpvue
 ```bash
 $ git clone https://github.com/kankungyip/weui-mpvue
 $ cd weui-mpvue
-$ yarn example
+$ yarn run example
 ```
 
 用[微信web开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)打开`weui-mpvue`项目目录。
@@ -57,52 +57,61 @@ export default {
 ### 新组件
 
 - [ ] `Avatar`
-- [ ] `Ellipsis`
-- [ ] `Tag`
-- [ ] `Price`
-- [ ] `Counter`
 - [ ] `Countdown`
-- [ ] `Steps`
+- [ ] `Counter`
+- [ ] `Ellipsis`
 - [ ] `NoticeBar`
-- [x] `Toptips` (从原 WeUI 的 `Input` 样式中独立出来，并增加多种配色）
-- [x] `MediaBox` (从原 WeUI 的 `Panel` 样式中独立出来，建议搭配 `Panel` 使用）
+- [ ] `Price`
+- [ ] `Steps`
+- [ ] `Tag`
 
-_*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。*_
+_部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。_
 
 ### 表单
 
-- [x] `Button`（_未完全组件化_，需要 Slot 支持：`.weui-btn-area`）
-- [ ] `Input`
-- [x] `List`（_未完全组件化_，需要 Slot 支持：`.weui-cells`、`.weui-cells__title`、`.weui-cells_after-title`、`.weui-cells__tips`）
-- [x] `Slider`
+- [ ] `Agree`
+- [x] `Button`
+  - [ ] `ButtonArea`（需要 Slot 支持）
+- [ ] `Counter`
+- [ ] `List`（需要 Slot 支持）
+  - [x] `Cell`（与 `List` 一起使用）
+- [ ] `Input`（与 `List` 一起使用）
+  - [ ] `CheckboxGroup`
+  - [ ] `RadioGroup`
+  - [ ] `Select`
+  - [ ] `Switch`
 - [x] `Uploader`
 
 ### 基础组件
 
+- [ ] `Avatar`
 - [ ] `Article`
-- [x] `Badge` (_未完全组件化_，新添加 `.weui-badge-box` 样式需要 Slot 支持)
-- [ ] `Flex`（_未组件化_，需要 Slot 支持）
+- [x] `Badge`
+  - [ ] `BadgeBox`（需要 Slot 支持)
+- [ ] `Countdown`
+- [ ] `Ellipsis`
+- [ ] `Flex`（需要 Slot 支持）
 - [x] `Footer`
-- [x] `Gallery`
 - [x] `Grid`
 - [x] `Icons`
 - [x] `Loadmore`
-- [ ] `Panel`（_未组件化_，需要 Slot 支持）
+- [ ] `Panel`（需要 Slot 支持）
+  - [x] `MediaBox`
 - [x] `Preview`
+- [ ] `Price`
 - [x] `Progress`
+- [ ] `Tag`
 
 ### 操作反馈
 
-- [x] `ActionSheet`
-- [x] `Dialog`
 - [x] `Msg`
-- [x] `Picker`
-- [x] `Toast`
+- [ ] `NoticeBar`
+- [x] `Toptips`
 
 ### 导航相关
 
-- [ ] `Navbar`（_未组件化_，需要 Slot 支持）
-- [x] `Tabbar`
+- [ ] `Tabs`（需要 Slot 支持）
+- [ ] `Steps`（需要 Slot 支持）
 
 ### 搜索相关
 
@@ -112,7 +121,7 @@ _*部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [m
 
 - WeUI 样式按需引用
 - `Button` 支持添加图标
-- `List` 支持添加多种徽章显示样式
+- `Cell` 支持添加多种徽章显示样式
 - `Badge` 支持自定义显示最大值，超过最大值显示 max+
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)

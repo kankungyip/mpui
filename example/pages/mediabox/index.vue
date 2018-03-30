@@ -101,7 +101,7 @@ export default {
         {
           separate: true,
           label: '其它信息',
-          navigateTo: 'navigate-to',
+          navigateTo: 'mediabox',
         },
       ],
     }

@@ -35,7 +35,6 @@ export default {
   props: {
     type:           { type: String,   default: 'default' },
     title:          { type: String,   default: '' },
-    // slot
     text:           { type: String,   default: '' },
     icon:           { type: String,   default: '' },
     color:          { type: String,   default: '' },
@@ -84,9 +83,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "../theme/widget/weui-page/weui-msg";
-
 .image {
   vertical-align: middle;
 }
+</style>
+
+<style lang="less">
+@import "../theme/widget/weui-page/weui-msg";
 </style>

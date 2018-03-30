@@ -1,5 +1,5 @@
 <template>
-  <span
+  <i
     class="weui-icon"
     :class="'weui-icon-' + type"
     :style="styled"
@@ -76,6 +76,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../theme/icon/weui-icon_font";
 </style>

@@ -53,11 +53,7 @@ export default {
     cancel () {
       this.disabled = false
       clearTimeout(this.timer)
-
-      wx.showToast({
-        title: '取消进度',
-        icon: 'none',
-      })
+      console.log('点击取消进度')
     },
   },
 }
