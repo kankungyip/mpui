@@ -1,0 +1,47 @@
+<template>
+  <radio-group @change="change">
+    <label v-for="(item, index) in items" class="weui-cell weui-check__label" :key="index">
+      <radio
+        class="weui-check"
+        :value="item.value"
+        :checked="item.checked"
+        :disabled="item.disabled"
+        />
+
+      <div class="weui-cell__bd">{{item.label}}</div>
+      <div v-if="item.checked" class="weui-cell__ft weui-cell__ft_in-radio">
+        <ui-icon type="success_no_circle" size="16" margin-left="3.2" margin-right="3.2" />
+      </div>
+    </label>
+  </radio-group>
+</template>
+
+<script>
+import uiIcon from './icon'
+
+export default {
+  components: {
+    uiIcon,
+  },
+
+  props: {
+    items: { type: Array, default: [] },
+  },
+
+  methods: {
+    change (evt) {
+      const items = this.items
+      for (let i = 0, len = items.length; i < len; ++i) {
+        items[i].checked = items[i].value.toString() === evt.mp.detail.value
+      }
+      this.$emit('update:items', items)
+      this.$emit('change', evt)
+    },
+  },
+}
+</script>
+
+<style lang="less">
+@import "../theme/widget/weui-cell/weui-cell";
+@import "../theme/widget/weui-cell/weui-check";
+</style>
