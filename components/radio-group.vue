@@ -10,7 +10,7 @@
 
       <div class="weui-cell__bd">{{item.label}}</div>
       <div v-if="item.checked" class="weui-cell__ft weui-cell__ft_in-radio">
-        <ui-icon type="success_no_circle" size="16" margin-left="3.2" margin-right="3.2" />
+        <ui-icon type="success_no_circle" size="16" margin-left="3.2" margin-right="3.2" :color="color" />
       </div>
     </label>
   </radio-group>
@@ -26,6 +26,7 @@ export default {
 
   props: {
     items: { type: Array, default: [] },
+    color: { type: String, default: '' },
   },
 
   methods: {

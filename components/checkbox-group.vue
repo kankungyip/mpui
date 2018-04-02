@@ -9,8 +9,8 @@
         />
 
       <div class="weui-cell__hd weui-check__hd_in-checkbox">
-        <ui-icon v-if="item.checked" type="success" size="23" margin-left="4.6" margin-right="4.6" />
-        <ui-icon v-else type="circle" size="23" margin-left="4.6" margin-right="4.6" />
+        <ui-icon v-if="item.checked" type="success" size="23" margin-left="4.6" margin-right="4.6" :color="color" />
+        <ui-icon v-else type="circle" size="23" margin-left="4.6" margin-right="4.6" :color="color" />
       </div>
       <div class="weui-cell__bd">{{item.label}}</div>
     </label>
@@ -27,6 +27,7 @@ export default {
 
   props: {
     items: { type: Array, default: [] },
+    color: { type: String, default: '' },
   },
 
   methods: {
