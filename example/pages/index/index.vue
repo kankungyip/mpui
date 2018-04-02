@@ -90,7 +90,7 @@ export default {
             'checkboxgroup',
             'radiogroup',
             'select*',
-            'switch*',
+            'switch',
             'uploader',
           ],
         },
