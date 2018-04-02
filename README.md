@@ -69,7 +69,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ### 表单
 
-- [ ] `Agree`
+- [x] `Agree`
 - [x] `Button`
   - [ ] `ButtonArea`（需要 Slot 支持）
 - [ ] `Counter`

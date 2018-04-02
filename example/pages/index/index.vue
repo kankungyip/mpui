@@ -80,7 +80,7 @@ export default {
           name: '表单',
           open: false,
           pages: [
-            'agree*',
+            'agree',
             'button',
             'buttonarea*',
             'counter*',
