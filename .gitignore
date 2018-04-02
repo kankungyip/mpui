@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 
+.tmp/
 *.wxss
 
 # Editor directories and files

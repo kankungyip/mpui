@@ -4,23 +4,44 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
+const tmpDir = path.join(__dirname, '.tmp')
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-function getEntry (dir, entryFile) {
-  const files = fs.readdirSync(dir)
-  return files.reduce((res, k) => {
-    const page = path.resolve(dir, k, entryFile)
-    if (fs.existsSync(page)) {
-      res[k] = page
-    }
+// 思路原自 https://github.com/F-loat/mpvue-entry
+// 因原项目的一些问题，无法兼容本项目，特改动如下
+function getEntry (entryFile, routerFile) {
+  if (!fs.existsSync(tmpDir)) {
+    fs.mkdirSync(tmpDir)
+  }
+
+  const baseDir = path.dirname(entryFile)
+  const template = fs.readFileSync(entryFile).toString()
+
+  const pages = require(path.join(baseDir, routerFile))
+
+  return pages.reduce((res, page) => {
+    const { name, path: pagePath, config } = page
+
+    const fileName = name || pagePath.replace(/\/(\w)/g, ($0, $1) => $1.toUpperCase())
+    const entryPath = path.join(tmpDir, `./${fileName}.js`)
+    const realPath = pagePath.replace(/^\//, '')
+
+    res[realPath] = entryPath
+
+    fs.writeFileSync(entryPath, template
+      .replace(/import App from .*/, `import App from '${path.join(baseDir, realPath)}'`)
+      .replace(/App.mpType .*/, `App.mpType = 'page'`)
+      .replace(/export default ?{[^]*}/, `export default ${JSON.stringify({ config })}`))
+
     return res
   }, {})
 }
 
 const appEntry = { app: resolve('./example/main.js') }
-const pagesEntry = getEntry(resolve('./example/pages'), 'main.js')
+const pagesEntry = getEntry(appEntry.app, 'router.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
 
 module.exports = {
@@ -58,7 +79,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve('example'), resolve('test')],
+        include: [resolve('example'), resolve('test'), tmpDir],
         use: [
           'babel-loader',
           {

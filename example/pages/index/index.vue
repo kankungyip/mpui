@@ -29,7 +29,7 @@
                 inside
                 show-access
                 :title="page"
-                :navigate-to="'/pages/' + page + '/' + page"
+                :navigate-to="'/pages/' + page + '/index'"
                 :key="pageIndex"
                 />
             </div>

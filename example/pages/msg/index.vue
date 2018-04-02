@@ -8,8 +8,8 @@
 
     <div class="page__bd">
       <div class="weui-btn-area">
-        <ui-button text="成功提示页" navigate-to="/pages/msg-success/msg-success" />
-        <ui-button text="失败提示页" navigate-to="/pages/msg-warn/msg-warn" />
+        <ui-button text="成功提示页" navigate-to="/pages/msg/success" />
+        <ui-button text="失败提示页" navigate-to="/pages/msg/warn" />
       </div>
     </div>
 
