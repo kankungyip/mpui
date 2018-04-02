@@ -78,7 +78,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [ ] `Input`（与 `List` 一起使用）
   - [x] `CheckboxGroup`
   - [x] `RadioGroup`
-  - [ ] `Select`
+  - [x] `Select`
   - [x] `Switch`
 - [x] `Uploader`
 
