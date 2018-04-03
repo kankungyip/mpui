@@ -28,6 +28,9 @@ module.exports = [
     path: '/pages/icons/index',
   },
   {
+    path: '/pages/input/index',
+  },
+  {
     path: '/pages/loadmore/index',
   },
   {

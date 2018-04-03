@@ -86,7 +86,7 @@ export default {
             'counter*',
             'list*',
             'cell',
-            'input*',
+            'input',
             'checkboxgroup',
             'radiogroup',
             'select',

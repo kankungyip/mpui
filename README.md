@@ -52,6 +52,7 @@ export default {
 }
 </script>
 ```
+需要 Slot 支持暂未实现的组件，请使用全局样式。
 
 ## 组件状态
 ### 新组件
@@ -74,12 +75,12 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
   - [ ] `ButtonArea`（需要 Slot 支持）
 - [ ] `Counter`
 - [ ] `List`（需要 Slot 支持）
-  - [x] `Cell`（与 `List` 一起使用）
-- [ ] `Input`（与 `List` 一起使用）
-  - [x] `CheckboxGroup`
-  - [x] `RadioGroup`
-  - [x] `Select`
-  - [x] `Switch`
+  - [x] `Cell`（需配合 `List` 一起使用）
+- [x] `Input`（需配合 `List` 一起使用）
+- [x] `CheckboxGroup`
+- [x] `RadioGroup`
+- [x] `Select`
+- [x] `Switch`
 - [x] `Uploader`
 
 ### 基础组件
@@ -132,6 +133,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ## 计划
 
 - `Article` 组件自动解析 markdown 格式（支持自定义样式）
+- 为表单引入独立 API `vm.$form`，方便表单数据的获取和校验
 
 ## 开发文档
 
