@@ -1,28 +1,32 @@
 <template>
-  <div class="weui-uploader">
-    <div class="weui-uploader__hd">
-      <div class="weui-uploader__title">{{title}}</div>
-      <div class="weui-uploader__info">{{files.length}}/{{filesLimit}}</div>
-    </div>
-    <div class="weui-uploader__bd">
-      <div class="weui-uploader__files">
-        <div
-          v-for="(item, index) in files"
-          class="weui-uploader__file"
-          :class="{ 'weui-uploader__file_status': url && item.progress !== true }"
-          :key="index"
-          @click="showActions(index)"
-          >
-          <img class="weui-uploader__img" mode="aspectFill" :src="item.path" />
-          <div v-if="url && item.progress !== true" class="weui-uploader__file-content">
-            <ui-icon v-if="item.progress == null" type="waiting" size="23" />
-            <ui-icon v-else-if="item.progress === false" type="warn" size="23" />
-            <span v-else>{{item.progress + '%'}}</span>
+  <div :class="{ 'weui-cell': !indie }">
+    <div :class="{ 'weui-cell__bd': !indie }">
+      <div class="weui-uploader">
+        <div class="weui-uploader__hd">
+          <div class="weui-uploader__title">{{title}}</div>
+          <div class="weui-uploader__info">{{files.length}}/{{filesLimit}}</div>
+        </div>
+        <div class="weui-uploader__bd">
+          <div class="weui-uploader__files">
+            <div
+              v-for="(item, index) in files"
+              class="weui-uploader__file"
+              :class="{ 'weui-uploader__file_status': url && item.progress !== true }"
+              :key="index"
+              @click="showActions(index)"
+              >
+              <img class="weui-uploader__img" mode="aspectFill" :src="item.path" />
+              <div v-if="url && item.progress !== true" class="weui-uploader__file-content">
+                <ui-icon v-if="item.progress == null" type="waiting" size="23" />
+                <ui-icon v-else-if="item.progress === false" type="warn" size="23" />
+                <span v-else>{{item.progress + '%'}}</span>
+              </div>
+            </div>
+          </div>
+          <div v-if="files.length < filesLimit" class="weui-uploader__input-box">
+            <div class="weui-uploader__input" @click="choose" />
           </div>
         </div>
-      </div>
-      <div v-if="files.length < filesLimit" class="weui-uploader__input-box">
-        <div class="weui-uploader__input" @click="choose" />
       </div>
     </div>
   </div>
@@ -37,14 +41,15 @@ export default {
   },
 
   props: {
-    title:        { type: String,   default: '' },
-    filesLimit:   { type: Number,   default: 9 },
-    sizeType:     { type: Array,    default: ['original', 'compressed'] },
-    sourceType:   { type: Array,    default: ['album', 'camera'] },
-    url:          { type: String,   default: '' },
-    name:         { type: String,   default: 'uploads' },
-    header:       { type: Object,   default: null },
-    formData:     { type: Object,   default: null },
+    title:        { type: String,     default: '' },
+    filesLimit:   { type: Number,     default: 9 },
+    sizeType:     { type: Array,      default: ['original', 'compressed'] },
+    sourceType:   { type: Array,      default: ['album', 'camera'] },
+    url:          { type: String,     default: '' },
+    name:         { type: String,     default: 'uploads' },
+    header:       { type: Object,     default: null },
+    formData:     { type: Object,     default: null },
+    indie:        { type: Boolean,    default: false },
   },
 
   data () {
@@ -153,5 +158,6 @@ export default {
 </script>
 
 <style lang="less">
+@import "../theme/widget/weui-cell/weui-cell";
 @import "../theme/widget/weui-cell/weui-uploader";
 </style>

@@ -7,11 +7,8 @@
     </div>
 
     <div class="page__bd">
-      <div class="weui-panel">
-        <div class="weui-panel__hd">图片上传</div>
-        <div class="weui-panel__bd panel">
-          <ui-uploader />
-        </div>
+      <div class="weui-cells">
+        <ui-uploader title="图片上传" />
       </div>
     </div>
 
@@ -29,7 +26,4 @@ export default {
 </script>
 
 <style>
-.panel {
-  padding: 5px 15px 10px 15px;
-}
 </style>
