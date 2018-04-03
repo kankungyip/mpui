@@ -8,8 +8,8 @@
 
     <div class="page__bd">
       <ui-searchbar
-        @realtime-results="realtimeResults"
-        @result-click="resultClick"
+        @realtimeresults="realtimeResults"
+        @resultclick="resultClick"
         @confirm="confirm"
         />
     </div>

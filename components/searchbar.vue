@@ -67,12 +67,12 @@ export default {
   methods: {
     typing ({ target }) {
       this.value = target.value
-      this.$emit('realtime-results', target.value, (results = []) => this.results = results)
+      this.$emit('realtimeresults', target.value, (results = []) => this.results = results)
     },
 
     clear () {
       this.value = ''
-      this.$emit('realtime-results', '', (results = []) => this.results = results)
+      this.$emit('realtimeresults', '', (results = []) => this.results = results)
     },
 
     show () {
@@ -92,7 +92,7 @@ export default {
       this.focus = false
       this.value = result.label
       this.results = [].concat(result)
-      this.$emit('result-click', result)
+      this.$emit('resultclick', result)
       this.$emit('confirm', result.value)
     }
   },
