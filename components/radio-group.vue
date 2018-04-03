@@ -29,15 +29,26 @@ export default {
     color: { type: String, default: '' },
   },
 
+  data () {
+    return {
+      radioItems: [],
+    }
+  },
+
   methods: {
     change (evt) {
-      const items = this.items
+      const items = [].concat(this.radioItems)
       for (let i = 0, len = items.length; i < len; ++i) {
         items[i].checked = items[i].value.toString() === evt.mp.detail.value
       }
+      this.radioItems = items
       this.$emit('update:items', items)
       this.$emit('change', evt)
     },
+  },
+
+  created () {
+    this.radioItems = this.items
   },
 }
 </script>

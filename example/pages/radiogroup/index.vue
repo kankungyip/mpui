@@ -9,7 +9,7 @@
     <div class="page__bd">
       <div class="weui-cells__title">单选列表项</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-radio-group :items.sync="radioItems" @change="change" />
+        <ui-radio-group :items="radioItems" @change="change" />
         <ui-cell type="link" title="添加更多" show-access />
       </div>
     </div>
