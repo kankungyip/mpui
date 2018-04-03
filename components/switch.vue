@@ -2,7 +2,7 @@
   <div class="weui-cell weui-cell_switch">
     <div class="weui-cell__bd">{{label}}</div>
     <div class="weui-cell__ft">
-      <switch :checked="checked" :color="color" @change="change" />
+      <switch :checked="switchChecked" :color="color" @change="change" />
     </div>
   </div>
 </template>
@@ -15,12 +15,23 @@ export default {
     color:    { type: String,     default: '' },
   },
 
+  data () {
+    return {
+      switchChecked: false,
+    }
+  },
+
   methods: {
     change (evt) {
       const checked = evt.mp.detail.value
+      this.switchChecked = checked
       this.$emit('update:checked', checked)
       this.$emit('change', evt)
     },
+  },
+
+  created () {
+    this.switchChecked = this.checked
   },
 }
 </script>
