@@ -9,7 +9,7 @@
     <div class="page__bd">
       <div class="weui-cells__title">复选列表项</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-checkbox-group :items.sync="checkboxItems" @change="change" />
+        <ui-checkbox-group :items="checkboxItems" @change="change" />
         <ui-cell type="link" title="添加更多" show-access />
       </div>
     </div>

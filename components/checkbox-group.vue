@@ -30,9 +30,15 @@ export default {
     color: { type: String, default: '' },
   },
 
+  data () {
+    return {
+      checkboxItems: [],
+    }
+  },
+
   methods: {
     change (evt) {
-      const items = this.items
+      const items = [].concat(this.checkboxItems)
       const values = evt.mp.detail.value
       for (var i = 0, lenI = items.length; i < lenI; ++i) {
         items[i].checked = false
@@ -43,9 +49,14 @@ export default {
           }
         }
       }
-      this.$emit('update:items', [].concat(items))
+      this.checkboxItems = items
+      this.$emit('update:items', items)
       this.$emit('change', evt)
     },
+  },
+
+  created () {
+    this.checkboxItems = this.items
   },
 }
 </script>
