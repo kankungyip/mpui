@@ -2,7 +2,7 @@
   <div class="weui-progress">
     <div class="weui-progress__bar">
       <progress
-        :percent="percent"
+        :percent="value"
         :showInfo="showInfo"
         :stroke-width="strokeWidth"
         :activeColor="color || activeColor"
@@ -37,17 +37,34 @@ export default {
     activeMode:         { type: String,     default: 'backwards' },
   },
 
+  data () {
+    return {
+      canceled: false,
+    }
+  },
+
   computed: {
+    value () {
+      return this.canceled ? 0 : this.percent
+    },
+
     canCancel () {
-      return this.showCancel && this.percent > 0 && this.percent < 100
+      return !this.canceled && this.showCancel && this.percent > 0 && this.percent < 100
     },
   },
 
   methods: {
     cancel (...args) {
-      this.$emit('update:percent', 0)
+      this.canceled = true
       this.$emit('cancel', ...args)
     },
+  },
+
+  beforeUpdate () {
+    if (!this._percent || this.percent > this._percent) {
+      this.canceled = false
+    }
+    this._percent = this.percent
   },
 }
 </script>
