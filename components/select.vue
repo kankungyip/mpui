@@ -13,7 +13,7 @@
     <div class="weui-cell__bd">
       <picker
         :mode="type"
-        :value="value"
+        :value="selectValue"
         :disabled="disabled"
         :range="range"
         :range-key="rangeKey"
@@ -60,6 +60,12 @@ export default {
     customItem:   { type: String,     default: '' },
   },
 
+  data () {
+    return {
+      selectValue: 0,
+    }
+  },
+
   computed: {
     inputMode () {
       return this.type === 'time' || this.type === 'date'
@@ -73,15 +79,15 @@ export default {
       switch (this.type) {
         case 'time':
         case 'date':
-          return this.value
+          return this.selectValue
         case 'region':
-          return this.value.join(this.separator)
+          return this.selectValue.join(this.separator)
         case 'multiSelector':
           return this.range
-            .map((item, index) => item[this.value[index]])
+            .map((item, index) => item[this.selectValue[index]])
             .join(this.separator)
         default:
-          return this.range[this.value]
+          return this.range[this.selectValue]
       }
     },
   },
@@ -89,6 +95,7 @@ export default {
   methods: {
     change (evt) {
       const value = evt.mp.detail.value
+      this.selectValue = value
       this.$emit('update:value', value)
       this.$emit('change', evt)
     },
@@ -101,6 +108,10 @@ export default {
       this.$emit('cancel', ...args)
     },
   },
+
+  created () {
+    this.selectValue = this.value
+  }
 }
 </script>
 

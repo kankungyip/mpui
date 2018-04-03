@@ -11,21 +11,19 @@
       <div class="weui-cells weui-cells_after-title">
         <ui-select
           :range="noLabelArray"
-          :value.sync="noLabelArrayIndex"
           @change="change"
           />
         <ui-select
           label="国家/地区"
           type="selector"
           :range="array"
-          :value.sync="arrayIndex"
           @change="change"
           />
         <ui-select
           label="多列"
           type="multiSelector"
           :range="multiArray"
-          :value.sync="multiIndex"
+          :value="multiIndex"
           :display-text="multiDisplayText"
           @change="change"
           @columnchange="columnChange"
@@ -33,20 +31,20 @@
         <ui-select
           label="日期"
           type="date"
-          :value.sync="date"
+          value="2018-04-01"
           @change="change"
           />
         <ui-select
           label="时间"
           type="time"
-          :value.sync="time"
+          value="12:01"
           @change="change"
           />
         <ui-select
           label="省市区"
           type="region"
           separator="/"
-          :value.sync="region"
+          :value="['湖南省', '长沙市', '芙蓉区']"
           @change="change"
           />
       </div>
@@ -66,18 +64,11 @@ export default {
   data () {
     return {
       noLabelArray: ['微信号', 'QQ', 'Email'],
-      noLabelArrayIndex: 0,
-
       array: ['中国', '美国', '英国'],
-      arrayIndex: 0,
 
       multiArray: [['无脊柱动物', '脊柱动物'], ['扁性动物', '线形动物', '环节动物', '软体动物', '节肢动物'], ['猪肉绦虫', '吸血虫']],
       multiIndex: [0, 0, 0],
       multiDisplayText: '猪肉绦虫',
-
-      date: '2018-04-01',
-      time: '12:01',
-      region: ['湖南省', '长沙市', '芙蓉区'],
     }
   },
 
