@@ -9,29 +9,28 @@
     <div class="page__bd">
       <div class="weui-cells__title">同意条款</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-cell title="标题文字" />
-        <ui-cell title="标题文字" />
+        <ui-input label="用户名" placeholder="请输入用户名" />
+        <ui-input label="密码" placeholder="请输入密码" password />
       </div>
 
-      <ui-agree :value.sync="value" :links="links" />
+      <ui-agree :links="links" />
     </div>
 
   </div>
 </template>
 
 <script>
-import uiCell from '../../../components/cell'
+import uiInput from '../../../components/input'
 import uiAgree from '../../../components/agree'
 
 export default {
   components: {
-    uiCell,
+    uiInput,
     uiAgree,
   },
 
   data () {
     return {
-      value: false,
       links: [
         {
           title: '相关条款',

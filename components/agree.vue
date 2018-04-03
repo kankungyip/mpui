@@ -6,10 +6,10 @@
           class="weui-agree__checkbox"
           value="agree"
           :id="id"
-          :checked="value"
+          :checked="agreeChecked"
           />
         <div class="weui-agree__checkbox-icon">
-          <icon v-if="value" class="weui-agree__checkbox-icon-check" type="success_no_circle" size="10"></icon>
+          <icon v-if="agreeChecked" class="weui-agree__checkbox-icon-check" type="success_no_circle" size="10" />
         </div>
         <div class="text">{{label}}</div>
         <a
@@ -26,9 +26,15 @@
 <script>
 export default {
   props: {
-    label:  { type: String,   default: '阅读并同意' },
-    value:  { type: Boolean,  default: false },
-    links:  { type: Array,    default: [] },
+    label:    { type: String,   default: '阅读并同意' },
+    checked:  { type: Boolean,  default: false },
+    links:    { type: Array,    default: [] },
+  },
+
+  data () {
+    return {
+      agreeChecked: false,
+    }
   },
 
   computed: {
@@ -39,11 +45,16 @@ export default {
 
   methods: {
     change (evt) {
-      const agree = !!evt.mp.detail.value.length
-      this.$emit('update:value', agree)
+      const checked = !!evt.mp.detail.value.length
+      this.agreeChecked = checked
+      this.$emit('update:checked', checked)
       this.$emit('change', evt)
     },
   },
+
+  created () {
+    this.agreeChecked = this.checked
+  }
 }
 </script>
 
