@@ -99,8 +99,8 @@ export default {
           name: '基础组件',
           open: false,
           pages: [
+            'article',
             'avatar*',
-            'article*',
             'badge',
             'badgebox*',
             'countdown*',

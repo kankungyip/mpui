@@ -61,6 +61,7 @@ export default {
 - [ ] `Countdown`
 - [ ] `Counter`
 - [ ] `Ellipsis`
+- [x] `LoadingBar`
 - [ ] `NoticeBar`
 - [ ] `Price`
 - [ ] `Steps`
@@ -85,8 +86,8 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ### 基础组件
 
+- [x] `Article`
 - [ ] `Avatar`
-- [ ] `Article`
 - [x] `Badge`
   - [ ] `BadgeBox`（需要 Slot 支持)
 - [ ] `Countdown`
@@ -122,19 +123,19 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ## 新特性
 
 - WeUI 样式按需引用
+- `Article` 组件自动解析 markdown 格式（支持自定义样式，.weui-article__<TAG>）
+- `Badge` 支持自定义显示最大值，超过最大值显示 max+
 - `Button` 支持添加图标
 - `Cell` 支持添加多种徽章显示样式
-- `Badge` 支持自定义显示最大值，超过最大值显示 max+
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
-- `SearchBar` 实时查询结果反馈
-- `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
-- `Toptips` 引入独立 API `vm.$toptips`
 - `LoadingBar` 引入独立 API `vm.$loading`
+- `SearchBar` 实时查询结果反馈
+- `Toptips` 引入独立 API `vm.$toptips`
+- `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
 
 ## 计划
 
-- `Article` 组件自动解析 markdown 格式（支持自定义样式）
 - 为表单引入独立 API `vm.$form`，方便表单数据的获取和校验
 
 ## 开发文档
