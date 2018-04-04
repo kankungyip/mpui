@@ -7,6 +7,9 @@ module.exports = [
     path: '/pages/agree/index',
   },
   {
+    path: '/pages/article/index',
+  },
+  {
     path: '/pages/badge/index',
   },
   {
