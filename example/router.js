@@ -31,6 +31,9 @@ module.exports = [
     path: '/pages/input/index',
   },
   {
+    path: '/pages/loadingbar/index',
+  },
+  {
     path: '/pages/loadmore/index',
   },
   {

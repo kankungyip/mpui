@@ -123,6 +123,7 @@ export default {
           name: '操作反馈',
           open: false,
           pages: [
+            'loadingbar',
             'msg',
             'noticebar*',
             'toptips',

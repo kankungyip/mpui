@@ -3,7 +3,7 @@
 > WeUI-mpvue 是一套基于 WeUI 开发的 mpvue 组件库，增加了一些新的特性和组件。
 > 我的目标是源于 WeUI，更胜 WeUI。
 
-![npm version](https://img.shields.io/npm/v/weui-mpvue.svg?style=flat) ![npm download](https://img.shields.io/npm/dt/weui-mpvue.svg?style=flat) ![npm license](https://img.shields.io/npm/l/weui-mpvue.svg?style=flat)
+[![npm version](https://img.shields.io/npm/v/weui-mpvue.svg?style=flat)](https://www.npmjs.com/package/weui-mpvue) [![npm download](https://img.shields.io/npm/dt/weui-mpvue.svg?style=flat)](https://www.npmjs.com/package/weui-mpvue) [![license](https://img.shields.io/npm/l/weui-mpvue.svg?style=flat)](https://github.com/kankungyip/weui-mpvue/blob/master/LICENSE)
 
 ## 说明
 
@@ -105,6 +105,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ### 操作反馈
 
+- [x] `LoadingBar`
 - [x] `Msg`
 - [ ] `NoticeBar`
 - [x] `Toptips`
@@ -129,6 +130,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - `SearchBar` 实时查询结果反馈
 - `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
 - `Toptips` 引入独立 API `vm.$toptips`
+- `LoadingBar` 引入独立 API `vm.$loading`
 
 ## 计划
 
