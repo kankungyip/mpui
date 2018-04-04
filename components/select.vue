@@ -115,7 +115,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/base/fn";
 @import "../theme/widget/weui-cell/weui-cell";
 @import "../theme/widget/weui-cell/weui-form/weui-form_common";

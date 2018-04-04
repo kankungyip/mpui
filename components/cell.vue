@@ -94,6 +94,9 @@ export default {
 
 <style lang="less" scoped>
 @import "../theme/base/fn";
+@import "../theme/widget/weui-cell/weui-cell";
+@import "../theme/widget/weui-cell/weui-access";
+@import "../theme/widget/weui-tips/weui-badge";
 
 .image-box {
   margin-right: 5px;
@@ -116,10 +119,4 @@ export default {
 .inside:before {
   right: @weuiCellGapH;
 }
-</style>
-
-<style lang="less">
-@import "../theme/widget/weui-cell/weui-cell";
-@import "../theme/widget/weui-cell/weui-access";
-@import "../theme/widget/weui-tips/weui-badge";
 </style>

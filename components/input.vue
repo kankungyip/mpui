@@ -186,7 +186,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-cell/weui-cell";
 @import "../theme/widget/weui-cell/weui-form/weui-vcode";
 @import "../theme/widget/weui-cell/weui-form/weui-select";
@@ -195,9 +195,7 @@ export default {
 .weui-vcode-btn {
   display: block;
 }
-</style>
 
-<style lang="less" scoped>
 .label-select {
   width: 105px
 }

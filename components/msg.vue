@@ -83,11 +83,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../theme/widget/weui-page/weui-msg";
+
 .image {
   vertical-align: middle;
 }
-</style>
-
-<style lang="less">
-@import "../theme/widget/weui-page/weui-msg";
 </style>

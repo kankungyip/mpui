@@ -101,23 +101,6 @@ export default {
 
 <style lang="less" scoped>
 @import "../theme/base/fn";
-
-.searchbar-box {
-  position: relative;
-}
-
-.searchbar-fixed-top {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.primary-text {
-  color: @weuiColorPrimary;
-}
-</style>
-
-<style lang="less">
 @import "../theme/widget/weui-searchbar/weui-searchbar";
 
 .weui-searchbar-result-cells {
@@ -131,5 +114,19 @@ export default {
   &:before {
     display: none;
   }
+}
+
+.searchbar-box {
+  position: relative;
+}
+
+.searchbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.primary-text {
+  color: @weuiColorPrimary;
 }
 </style>

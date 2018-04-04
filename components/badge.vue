@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-tips/weui-badge";
 
 .weui-badge {

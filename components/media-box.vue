@@ -110,25 +110,10 @@ export default {
 
 <style lang="less" scoped>
 @import "../theme/base/fn";
+@import "../theme/widget/weui-cell/weui-cell";
+@import "../theme/widget/weui-media-box/weui-media-box";
 
 .link {
   color: @weuiLinkColorDefault;
-}
-</style>
-
-<style lang="less">
-@import "../theme/widget/weui-media-box/weui-media-box";
-@import "../theme/widget/weui-cell/weui-cell";
-
-.weui-cells_in-small-appmsg {
-  margin-top: 0 !important;
-}
-
-.weui-panel__ft {
-  .weui-cell:first-child {
-    &:before {
-      display: block;
-    }
-  }
 }
 </style>

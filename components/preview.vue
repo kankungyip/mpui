@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-cell/weui-form/weui-form-preview";
 
 .weui-form-preview {

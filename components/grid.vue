@@ -40,6 +40,6 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-grid/weui-grid";
 </style>

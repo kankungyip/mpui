@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-agree/weui-agree";
 
 .weui-agree__link {
@@ -70,9 +70,7 @@ export default {
     content: "";
   }
 }
-</style>
 
-<style lang="less" scoped>
 .text {
   display: inline;
 

@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "../theme/widget/weui-cell/weui-cell";
 @import "../theme/widget/weui-cell/weui-check";
 </style>
