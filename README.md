@@ -73,10 +73,10 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 - [x] `Agree`
 - [x] `Button`
-  - [ ] `ButtonArea`（需要 Slot 支持）
+- [ ] `ButtonArea`（需要 Slot 支持）
 - [ ] `Counter`
 - [ ] `List`（需要 Slot 支持）
-  - [x] `Cell`（需配合 `List` 一起使用）
+- [x] `Cell`（需配合 `List` 一起使用）
 - [x] `Input`（需配合 `List` 一起使用）
 - [x] `CheckboxGroup`
 - [x] `RadioGroup`
@@ -89,16 +89,18 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [x] `Article`
 - [ ] `Avatar`
 - [x] `Badge`
-  - [ ] `BadgeBox`（需要 Slot 支持)
+- [ ] `BadgeBox`（需要 Slot 支持)
 - [ ] `Countdown`
 - [ ] `Ellipsis`
 - [ ] `Flex`（需要 Slot 支持）
+- [ ] `Row`
+- [ ] `Col`
 - [x] `Footer`
 - [x] `Grid`
 - [x] `Icons`
 - [x] `Loadmore`
 - [ ] `Panel`（需要 Slot 支持）
-  - [x] `MediaBox`
+- [x] `MediaBox`
 - [x] `Preview`
 - [ ] `Price`
 - [x] `Progress`
@@ -114,7 +116,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ### 导航相关
 
 - [ ] `Tabs`（需要 Slot 支持）
-- [ ] `Steps`（需要 Slot 支持）
+- [ ] `Steps`
 
 ### 搜索相关
 
@@ -123,13 +125,11 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ## 新特性
 
 - WeUI 样式按需引用
-- `Article` 组件自动解析 markdown 格式（支持自定义样式，.weui-article__<TAG>）
+- `Article` 组件自动解析 markdown 格式内容，支持自定义样式：.weui-article__<TAG>
 - `Badge` 支持自定义显示最大值，超过最大值显示 max+
-- `Button` 支持添加图标
-- `Cell` 支持添加多种徽章显示样式
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
-- `LoadingBar` 引入独立 API `vm.$loading`
+- `LoadingBar` 引入独立 API `vm.$loading`，整合 `wx.showNavigationBarLoading`
 - `SearchBar` 实时查询结果反馈
 - `Toptips` 引入独立 API `vm.$toptips`
 - `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示

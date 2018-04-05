@@ -1,3 +1,10 @@
+#### v0.6.0 (2018-04-0)
+
+- [添加] `Article` 组件
+- [添加] `LoadingBar` 组件
+- [优化] 调整部分组件的样式
+- [其他] 使用 [mpvue-entry](https://github.com/F-loat/mpvue-entry)
+
 #### v0.5.0 (2018-04-03)
 
 - [添加] `Input` 组件
