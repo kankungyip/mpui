@@ -23,12 +23,9 @@ import Vue from 'vue'
 let ref, timer
 
 const hide = () => {
-  clearTimeout(timer)
-  if (ref.percent >= 100 && ref.color === ref.activeColor) {
-    ref.color = ref.successColor
-  }
   ref.active = false
   ref.hidden = true
+  wx.hideNavigationBarLoading()
 }
 
 const progress = (percent) => {
@@ -37,39 +34,36 @@ const progress = (percent) => {
   }
 }
 
-const start = (percent) => {
-  clearTimeout(timer)
-  ref.percent = 1
-  ref.active = true
-  ref.hidden = false
-  ref.animation = true
-  ref.color = ref.activeColor
-  progress(percent)
+const start = (force) => {
+  if (force || ref.hidden) {
+    clearTimeout(timer)
+    ref.percent = 1
+    ref.active = true
+    ref.hidden = false
+    ref.animation = true
+    ref.color = ref.activeColor
+    wx.showNavigationBarLoading()
+  }
 }
 
-const done = (delay) => {
-  if (ref.hidden || ref.percent >= 100) {
-    return
+const done = () => {
+  if (!ref.hidden && ref.percent < 100) {
+    clearTimeout(timer)
+    progress(100)
+    ref.active = false
+    ref.color = ref.successColor
+    timer = setTimeout(hide, 230)
   }
-  clearTimeout(timer)
-  if (delay == null) {
-    delay = 3 * ((100 - ref.percent) / 100)
-  }
-  timer = setTimeout(hide, delay * 1000)
-  progress(100)
 }
 
-const error = (delay) => {
-  if (ref.hidden || ref.percent >= 100) {
-    return
+const error = () => {
+  if (!ref.hidden && ref.percent < 100) {
+    clearTimeout(timer)
+    progress(100)
+    ref.active = false
+    ref.color = ref.warnColor
+    timer = setTimeout(hide, 230)
   }
-  clearTimeout(timer)
-  if (delay) {
-    timer = setTimeout(hide, delay * 1000)
-  }
-  progress(100)
-  ref.active = false
-  ref.color = ref.warnColor
 }
 
 Vue.prototype['$loading'] = { start, progress, done, error, hide }
