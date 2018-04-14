@@ -19,7 +19,8 @@
     "url": "https://github.com/kankungyip/weui-mpvue/"
   },
   "dependencies": {
-    "md-jml": "^2.0.1"
+    "md-jml": "^2.0.1",
+    "to-style": "^1.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

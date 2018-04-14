@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import { string as toStyle } from 'to-style'
 import uiIcon from './icon'
 
 export default {
@@ -61,14 +62,14 @@ export default {
     sendMessagePath:        { type: String,     default: '' },
     sendMessageImg:         { type: String,     default: '' },
     sendMessageCard:        { type: Boolean,    default: false },
-    margin:                 { type: Number,     default: 0 },
-    marginTop:              { type: Number,     default: 0 },
-    marginRight:            { type: Number,     default: 0 },
-    marginBottom:           { type: Number,     default: 0 },
-    marginLeft:             { type: Number,     default: 0 },
+    styles:                 { type: Object,     default: null },
   },
 
   computed: {
+    styled () {
+      return this.styles ? toStyle(this.styles) : ''
+    },
+
     customOpenType () {
       if (this.navigateTo) {
         return 'navigate'
@@ -84,47 +85,21 @@ export default {
     },
 
     imageStyled () {
-      const styles = []
-      styles.push(`width: ${this.iconSize}px`)
-      styles.push(`height: ${this.iconSize}px`)
-      return styles.join(';')
+      return toStyle({
+        width: this.iconSize,
+        height: this.iconSize,
+      })
     },
 
-    styled () {
-      const styles = []
-
-      if (this.margin && isNaN(this.margin)) {
-        styles.push(`margin: ${this.margin}`)
-      } else if (+this.margin > 0) {
-        styles.push(`margin: ${this.margin}px`)
+    iconStyle () {
+      const styles = {
+        marginRight: 5,
       }
-
-      if (this.marginTop && isNaN(this.marginTop)) {
-        styles.push(`margin-top: ${this.marginTop}`)
-      } else if (+this.marginTop > 0) {
-        styles.push(`margin-top: ${this.marginTop}px`)
+      if (this.disabled) {
+        styles.opacity = 0.3
       }
-
-      if (this.marginRight && isNaN(this.marginRight)) {
-        styles.push(`margin-right: ${this.marginRight}`)
-      } else if (+this.marginRight > 0) {
-        styles.push(`margin-right: ${this.marginRight}px`)
-      }
-
-      if (this.marginBottom && isNaN(this.marginBottom)) {
-        styles.push(`margin-bottom: ${this.marginBottom}`)
-      } else if (+this.marginBottom > 0) {
-        styles.push(`margin-bottom: ${this.marginBottom}px`)
-      }
-
-      if (this.marginLeft && isNaN(this.marginLeft)) {
-        styles.push(`margin-left: ${this.marginLeft}`)
-      } else if (+this.marginLeft > 0) {
-        styles.push(`margin-left: ${this.marginLeft}px`)
-      }
-
-      return styles.join(';')
-    }
+      return styles
+    },
   },
 
   methods: {
@@ -168,14 +143,6 @@ export default {
     error (...args) {
       this.$emit('error', ...args)
     },
-
-  },
-
-  created () {
-    if (this.customNavigateStyleBack) {
-      const { statusBarHeight } = wx.getSystemInfoSync() || {}
-      this.navigateBackStyled = `top: ${statusBarHeight + 6}px`
-    }
   },
 }
 </script>

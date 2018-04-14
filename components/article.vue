@@ -1,9 +1,10 @@
 <template>
-  <rich-text :nodes="nodes" />
+  <rich-text :nodes="nodes" :style="styled" />
 </template>
 
 <script>
 import { parse } from 'md-jml'
+import { string as toStyle } from 'to-style'
 
 const parseText = (text) => ({
   type: 'text',
@@ -25,12 +26,20 @@ const parseNode = ([tag, opts, ...children], classname) => ({
 export default {
   props: {
     content: { type: String, default: '' },
+    // fixed: style
+    styles:  { type: Object, default: null },
   },
 
   data () {
     return {
       nodes: [],
     }
+  },
+
+  computed: {
+    styled () {
+      return this.styles ? toStyle(this.styles) : ''
+    },
   },
 
   created () {

@@ -6,6 +6,7 @@
       'weui-cell-access': showAccess,
       'inside': inside
     }"
+    :style="styled"
     :hover-class="showActive || showAccess ? 'weui-cell_active': ''"
     @click="click"
     >
@@ -40,6 +41,7 @@
 </template>
 
 <script>
+import { string as toStyle } from 'to-style'
 import uiBadge from './badge'
 
 export default {
@@ -62,14 +64,20 @@ export default {
     badgeShowDot:     { type: Boolean,    default: false },
     showActive:       { type: Boolean,    default: false },
     showAccess:       { type: Boolean,    default: false },
+    // fixed: style
+    styles:           { type: Object,     default: null },
   },
 
   computed: {
+    styled () {
+      return this.styles ? toStyle(this.styles) : ''
+    },
+
     imageStyled () {
-      const styles = []
-      styles.push(`width: ${this.imageWidth}px`)
-      styles.push(`height: ${this.imageHeight}px`)
-      return styles.join(';')
+      return toStyle({
+        width: this.imageWidth,
+        height: this.imageHeight,
+      })
     },
 
     badgeText () {
