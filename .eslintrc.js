@@ -27,7 +27,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // custom rules
     'space-before-function-paren': [1, 'always'],
-    'comma-dangle': [1, 'always-multiline'],
+    'comma-dangle': [1, 'only-multiline'],
   },
   globals: {
     App: true,
