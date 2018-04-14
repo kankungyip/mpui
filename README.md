@@ -33,25 +33,46 @@ $ yarn run example
 @import "<project_dir>/node_modules/weui-mpvue/theme/weui";
 </style>
 ```
+
 并非全部组件样式，仅全局（字体、颜色等）样式和未被 Vue 组件化的 WeUI 样式。
 
 ### 使用组件
 
 ```vue
 <template>
-  <ui-button text="按钮" />
+  <ui-article :content="content" />
 </template>
 
 <script>
-import uiButton 'weui-mpvue/components/button'
+import uiArticle from 'weui-mpvue/components/article'
 
 export default {
   components: {
-    uiBUtton
-  }
+    uiArticle,
+  },
+
+  data () {
+    return {
+      content: `# 大标题
+
+## 章标题
+
+### 1.1 节标题
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+![](https://avatars1.githubusercontent.com/u/1096425?s=460&v=4)
+
+### 1.2 节标题
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+`,
+    }
+  },
 }
 </script>
 ```
+
 需要 Slot 支持暂未实现的组件，请使用全局样式。
 
 ## 组件状态
@@ -89,7 +110,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [x] `Article`
 - [ ] `Avatar`
 - [x] `Badge`
-- [ ] `BadgeBox`（需要 Slot 支持)
+- [ ] `BadgeBox`（需要 Slot 支持）
 - [ ] `Countdown`
 - [ ] `Ellipsis`
 - [ ] `Flex`（需要 Slot 支持）
