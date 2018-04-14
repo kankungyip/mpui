@@ -23,9 +23,12 @@
     @getphonenumber="getPhoneNumber"
     @error="error"
     >
-    <img v-if="image" class="image" :src="image" :style="imageStyled" />
-    <ui-icon v-else-if="icon" margin-right="5" :type="icon" :size="iconSize" />
-    <span class="text">{{text}}</span>
+    <block v-if="noSlot">
+      <img v-if="image" class="image" :src="image" :style="imageStyled" />
+      <ui-icon v-else-if="icon" :type="icon" :size="iconSize" :styles="iconStyle" />
+      <span class="text">{{text}}</span>
+    </block>
+    <slot />
   </button>
 </template>
 
@@ -39,14 +42,9 @@ export default {
   },
 
   props: {
-     // slot
     text:                   { type: String,     default: '' },
     icon:                   { type: String,     default: '' },
     image:                  { type: String,     default: '' },
-    // for custom open-type: navigate, redirect, switchTab
-    navigateTo:             { type: String,     default: '' },
-    // for custom open-type: navigateBack
-    navigateBackDelta:      { type: Number,     default: 0 },
     type:                   { type: String,     default: 'default' },
     size:                   { type: Number,     default: 'default' },
     disabled:               { type: Boolean,    default: false },
@@ -62,10 +60,19 @@ export default {
     sendMessagePath:        { type: String,     default: '' },
     sendMessageImg:         { type: String,     default: '' },
     sendMessageCard:        { type: Boolean,    default: false },
+    // for custom open-type: navigate, redirect, switchTab
+    navigateTo:             { type: String,     default: '' },
+    // for custom open-type: navigateBack
+    navigateBackDelta:      { type: Number,     default: 0 },
+    // fixed: style
     styles:                 { type: Object,     default: null },
   },
 
   computed: {
+    noSlot () {
+      return !this.$slots.default
+    },
+
     styled () {
       return this.styles ? toStyle(this.styles) : ''
     },
