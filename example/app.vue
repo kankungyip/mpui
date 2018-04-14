@@ -1,5 +1,7 @@
 <script>
 export default {
+  mpType: 'app',
+
   created () {
     console.log('https://github.com/kankungyip/weui-mpvue')
   },
