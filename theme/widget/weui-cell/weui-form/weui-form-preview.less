@@ -21,84 +21,84 @@
 @import "../../../base/fn";
 
 .weui-form-preview{
-    position: relative;
-    background-color: #FFFFFF;
-    &:before{
-        .setTopLine(@weuiCellBorderColor);
-    }
-    &:after{
-        .setBottomLine(@weuiCellBorderColor);
-    }
+  position: relative;
+  background-color: #FFFFFF;
+  &:before{
+    .setTopLine(@weuiCellBorderColor);
+  }
+  &:after{
+    .setBottomLine(@weuiCellBorderColor);
+  }
 }
 .weui-form-preview__value{
-    font-size: 14px;
+  font-size: @weuiFontSizeSmall;
 }
 .weui-form-preview__value_in-hd{
-    font-size: 26px;
+  font-size: 26px;
 }
 .weui-form-preview__hd{
-    position: relative;
-    padding: @weuiCellGapV @weuiCellGapH;
-    text-align: right;
-    line-height: 2.5em;
-    &:after{
-        .setBottomLine(@weuiCellBorderColor);
-        left: @weuiCellGapH;
-    }
+  position: relative;
+  padding: @weuiCellGapV @weuiCellGapH;
+  text-align: right;
+  line-height: 2.5em;
+  &:after{
+    .setBottomLine(@weuiCellBorderColor);
+    left: @weuiCellGapH;
+  }
 }
 .weui-form-preview__bd{
-    padding: @weuiCellGapV @weuiCellGapH;
-    font-size: .9em;
-    text-align: right;
-    color: @weuiTextColorGray;
-    line-height: 2;
+  padding: @weuiCellGapV @weuiCellGapH;
+  font-size: .9em;
+  text-align: right;
+  color: @weuiTextColorGray;
+  line-height: 2;
 }
 .weui-form-preview__ft{
-    position: relative;
-    line-height: 50px;
-    display: flex;
-    &:after {
-        .setTopLine(@weuiDialogLineColor);
-    }
+  position: relative;
+  line-height: 50px;
+  display: flex;
+  &:after {
+    .setTopLine(@weuiDialogLineColor);
+  }
 }
 .weui-form-preview__item{
-    overflow: hidden;
+  overflow: hidden;
 }
 .weui-form-preview__label{
-    float: left;
-    margin-right: 1em;
-    min-width: 4em;
-    color: @weuiTextColorGray;
-    text-align: justify;
-    text-align-last: justify;
+  float: left;
+  margin-right: 1em;
+  min-width: 4em;
+  color: @weuiTextColorGray;
+  text-align: justify;
+  text-align-last: justify;
 }
 .weui-form-preview__value{
-    display: block;
-    overflow: hidden;
-    word-break:normal;
-    word-wrap: break-word;
+  display: block;
+  overflow: hidden;
+  word-break:normal;
+  word-wrap: break-word;
 }
 .weui-form-preview__btn {
-    position: relative;
-    display: block;
-    flex: 1;
-    color: @weuiDialogLinkColor;
-    text-align: center;
+  position: relative;
+  display: block;
+  flex: 1;
+  color: @weuiDialogLinkColor;
+  text-align: center;
+  &:after {
+    .setLeftLine(@weuiDialogLineColor);
+  }
+  &:first-child {
     &:after {
-        .setLeftLine(@weuiDialogLineColor);
+      display: none;
     }
-    &:first-child {
-        &:after {
-            display: none;
-        }
-    }
+  }
 }
 .weui-form-preview__btn_active{
-    background-color: @weuiDialogLinkActiveBc;
+  background-color: @weuiDialogLinkActiveBc;
 }
 .weui-form-preview__btn_default {
-    color: @weuiTextColorGray;
+  color: @weuiTextColorGray;
 }
 .weui-form-preview__btn_primary {
-    color: #0BB20C;
+  color: #0BB20C;
 }
