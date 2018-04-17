@@ -86,7 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 - [ ] `NoticeBar`
 - [ ] `Price`
 - [ ] `Steps`
-- [ ] `Tag`
+- [x] `Tag`
 
 _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。_
 
@@ -125,7 +125,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [x] `Preview`
 - [ ] `Price`
 - [x] `Progress`
-- [ ] `Tag`
+- [x] `Tag`
 
 ### 操作反馈
 

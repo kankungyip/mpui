@@ -70,6 +70,9 @@ module.exports = [
     path: '/pages/switch/index',
   },
   {
+    path: '/pages/tag/index',
+  },
+  {
     path: '/pages/toptips/index',
   },
   {

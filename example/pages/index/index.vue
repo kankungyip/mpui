@@ -72,7 +72,7 @@ export default {
             'noticebar*',
             'price*',
             'steps*',
-            'tag*',
+            'tag',
           ],
         },
         {
@@ -115,7 +115,7 @@ export default {
             'preview',
             'price*',
             'progress',
-            'tag*',
+            'tag',
           ],
         },
         {
