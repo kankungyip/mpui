@@ -114,8 +114,8 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [ ] `Countdown`
 - [ ] `Ellipsis`
 - [ ] `Flex`（需要 Slot 支持）
-- [ ] `Row`
-- [ ] `Col`
+- [ ] `Row`（需要 Slot 支持）
+- [ ] `Col`（需要 Slot 支持）
 - [x] `Footer`
 - [x] `Grid`
 - [x] `Icons`
@@ -146,7 +146,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ## 新特性
 
 - WeUI 样式按需引用
-- `Article` 组件自动解析 markdown 格式内容，支持自定义样式：.weui-article__<TAG>
+- `Article` 组件自动解析 markdown 格式内容，支持自定义样式：`.weui-article__TAG`
 - `Badge` 支持自定义显示最大值，超过最大值显示 max+
 - `Grid` 自持自定义列数
 - `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
@@ -161,7 +161,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ## 开发文档
 
-有点懒，暂时没有编写，请参考 `example` 目录下的示例源码。
+有点懒，暂时没有编写，请参考 [`example`](https://github.com/kankungyip/weui-mpvue/tree/master/example) 目录下的示例源码。
 
 ## License
 

@@ -69,6 +69,7 @@ export default {
             'countdown*',
             'counter*',
             'ellipsis*',
+            'loadingbar',
             'noticebar*',
             'price',
             'steps*',
