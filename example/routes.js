@@ -55,6 +55,9 @@ module.exports = [
     path: '/pages/preview/index',
   },
   {
+    path: '/pages/price/index',
+  },
+  {
     path: '/pages/progress/index',
   },
   {

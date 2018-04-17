@@ -84,7 +84,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 - [ ] `Ellipsis`
 - [x] `LoadingBar`
 - [ ] `NoticeBar`
-- [ ] `Price`
+- [x] `Price`
 - [ ] `Steps`
 - [x] `Tag`
 
@@ -123,7 +123,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [ ] `Panel`（需要 Slot 支持）
 - [x] `MediaBox`
 - [x] `Preview`
-- [ ] `Price`
+- [x] `Price`
 - [x] `Progress`
 - [x] `Tag`
 
