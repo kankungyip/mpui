@@ -100,7 +100,7 @@ export default {
 
     iconStyle () {
       const styles = {
-        marginRight: 5,
+        verticalAlign: 'inherit'
       }
       if (this.disabled) {
         styles.opacity = 0.3
@@ -158,11 +158,10 @@ export default {
 @import "../theme/widget/weui-button/weui-button";
 
 .image {
-  margin-right: 5px;
   vertical-align: middle;
 }
 
 .text {
-  vertical-align: middle;
+  padding-left: 5px;
 }
 </style>
