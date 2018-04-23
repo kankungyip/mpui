@@ -2,8 +2,7 @@
 
 原 [weui-mpvue](https://www.npmjs.com/package/weui-mpvue)
 
-> MpUI 是一套基于 weui-wxss 开发的 mpvue 组件库，增加了一些新的特性和组件。
-> 我的目标是源于 WeUI，更胜 WeUI。
+> MpUI 是一套基于 weui-wxss 开发的 mpvue 组件库，增加了一些新的特性、样式和组件。
 
 [![npm version](https://img.shields.io/npm/v/mpui.svg?style=flat)](https://www.npmjs.com/package/mpui) [![npm download](https://img.shields.io/npm/dt/mpui.svg?style=flat)](https://www.npmjs.com/package/mpui) [![license](https://img.shields.io/npm/l/mpui.svg?style=flat)](https://github.com/kankungyip/mpui/blob/master/LICENSE)
 
@@ -23,7 +22,7 @@ $ yarn add mpui
 
 ## 预览
 
-![](https://mp.weixin.qq.com/wxopen/qrcode?action=show&type=2&fakeid=3834027984&token=2071919981)
+![](static/images/qrcode.jpg)
 
 ## 使用
 ### 引入全局样式
@@ -34,7 +33,7 @@ $ yarn add mpui
 </style>
 ```
 
-并非全部组件样式，仅全局（字体、颜色等）样式和未被 Vue 组件化的 WeUI 样式。
+并非全部组件样式，仅全局（字体、颜色等）样式和未被 Vue 组件化的 weui-wxss。
 
 ### 使用组件
 
@@ -77,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ## 组件状态
 
-_部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。_
+_部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 weui-wxss。_
 
 ### 表单
 
