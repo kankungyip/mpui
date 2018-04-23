@@ -4,7 +4,7 @@
     :class="{
       'weui-cell_link': type === 'link',
       'weui-cell-access': showAccess,
-      'inside': inside
+      'indent': indent
     }"
     :style="styled"
     :hover-class="showActive || showAccess ? 'weui-cell_active': ''"
@@ -57,7 +57,7 @@ export default {
     imageWidth:       { type: Number,     default: 20 },
     imageHeight:      { type: Number,     default: 20 },
     navigateTo:       { type: String,     default: '' },
-    inside:           { type: Boolean,    default: false },
+    indent:           { type: Boolean,    default: false },
     badgePosition:    { type: String,     default: 'title' },
     badgeValue:       { type: String,     default: '' },
     badgeMax:         { type: Number,     default: 999 },
@@ -124,7 +124,7 @@ export default {
   vertical-align: middle;
 }
 
-.inside:before {
+.indent:before {
   right: @weuiCellGapH;
 }
 </style>

@@ -26,9 +26,9 @@
             <div class="weui-cells" :class="{ 'weui-cells_show': item.open }">
               <ui-cell
                 v-for="(page, pageIndex) in item.pages"
-                inside
-                show-access
+                indent
                 :title="page"
+                :show-access="!/\*$/.test(page)"
                 :navigate-to="'/pages/' + page + '/index'"
                 :key="pageIndex"
                 />
