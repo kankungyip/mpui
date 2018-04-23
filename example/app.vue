@@ -3,7 +3,7 @@ export default {
   mpType: 'app',
 
   created () {
-    console.log('https://github.com/kankungyip/weui-mpvue')
+    console.log('https://github.com/kankungyip/mpui')
   },
 }
 </script>

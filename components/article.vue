@@ -16,7 +16,7 @@ const parseNode = ([tag, opts, ...children], classname) => ({
   name: tag,
   attrs: {
     ...opts,
-    class: classname || `weui-article__${tag} fixed__${tag}`,
+    class: classname || `weui-article__${tag} mpui-article__${tag}`,
   },
   children: children.map((child) => (
     Array.isArray(child) ? parseNode(child) : parseText(child)
@@ -44,7 +44,7 @@ export default {
 
   created () {
     parse(this.content, {}, (node) => {
-      this.nodes = [].concat(parseNode(node, 'weui-article'))
+      this.nodes = [].concat(parseNode(node, 'weui-article mpui-article'))
     })
   },
 }
@@ -53,23 +53,20 @@ export default {
 <style lang="less">
 @import "../theme/widget/weui-page/weui-article";
 
-.weui-article__h4,
-.weui-article__h5,
-.weui-article__h6 {
+.mpui-article__h4,
+.mpui-article__h5,
+.mpui-article__h6 {
   font-weight: 400;
   font-size: 15px;
   margin-bottom: .34em;
 }
 
-.weui-article__ul {
+.mpui-article__ul {
   margin: 0 0 .8em;
 }
 
-.weui-article__img {
+.mpui-article__img {
   margin: 4px 0;
-}
-
-.fixed__img {
   max-width: 100%;
 }
 </style>

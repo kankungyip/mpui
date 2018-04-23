@@ -26,7 +26,7 @@
     <block v-if="noSlot">
       <img v-if="image" class="image" :src="image" :style="imageStyled" />
       <ui-icon v-else-if="icon" :type="icon" :size="iconSize" :styles="iconStyle" />
-      <span class="text">{{text}}</span>
+      <span v-if="text" class="text">{{text}}</span>
     </block>
     <slot />
   </button>

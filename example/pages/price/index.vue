@@ -11,6 +11,7 @@
       <ui-price value="1.20" decimal="auto" strong />
       <ui-price value="1.21" decimal="0" />
       <ui-price value="1.24" symbol="$" decimal="1" status="del" color="#666" />
+      <ui-price value="1.23" symbol-style="sub" size="30" decimal-size="13" strong />
       <ui-price value="1.23" symbol-style="sup" decimal-size="13" strong />
     </div>
 

@@ -13,7 +13,7 @@
       <div v-if="image && type !== 'link'" class="weui-cell__hd">
         <div
           class="image-box"
-          :class="{ 'weui-badge-box': (badgePosition === 'image' && badgeText) || badgeShowDot }"
+          :class="{ 'mpui-badge-box': (badgePosition === 'image' && badgeText) || badgeShowDot }"
           >
           <img class="image" :src="image" :style="imageStyled" />
           <ui-badge
@@ -109,7 +109,7 @@ export default {
 .image-box {
   margin-right: 5px;
 
-  &.weui-badge-box {
+  &.mpui-badge-box {
     margin-right: 10px;
   }
 }

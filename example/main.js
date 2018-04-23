@@ -14,7 +14,7 @@ export default {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#f8f8f8',
-      navigationBarTitleText: 'WeUI for mpvue',
+      navigationBarTitleText: 'MpUI 组件库演示',
       navigationBarTextStyle: 'black',
     },
   },

@@ -47,25 +47,25 @@
 
       <div class="page__bd_spacing weui-flex margin-top">
         <div class="weui-flex__item center">
-          <div class="weui-badge-box">
+          <div class="mpui-badge-box">
             <img src="/static/images/pic_160.png" style="width:50px;height:50px" />
             <ui-badge value="8" />
           </div>
         </div>
         <div class="weui-flex__item center">
-          <div class="weui-badge-box">
+          <div class="mpui-badge-box">
             <img src="/static/images/pic_160.png" style="width:50px;height:50px" />
             <ui-badge value="1000" />
           </div>
         </div>
         <div class="weui-flex__item center">
-          <div class="weui-badge-box">
+          <div class="mpui-badge-box">
             <img src="/static/images/pic_160.png" style="width:50px;height:50px" />
             <ui-badge show-dot />
           </div>
         </div>
         <div class="weui-flex__item center">
-          <div class="weui-badge-box">
+          <div class="mpui-badge-box">
             <img src="/static/images/pic_160.png" style="width:50px;height:50px" />
             <ui-badge value="NEW" />
           </div>

@@ -11,7 +11,7 @@
         />
     </div>
 
-    <div class="weui-search-bar">
+    <div class="weui-search-bar" :style="styled">
       <div class="weui-search-bar__form">
         <div class="weui-search-bar__box">
           <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { string as toStyle } from 'to-style'
 import uiCell from './cell'
 
 export default {
@@ -54,6 +55,8 @@ export default {
     defaultValue:   { type: String,     default: '' },
     placeholder:    { type: String,     default: '搜索' },
     fixedTop:       { type: Boolean,    default: false },
+    // fixed: style
+    styles:         { type: Object, default: null },
   },
 
   data () {
@@ -62,6 +65,11 @@ export default {
       value: '',
       results: [],
     }
+  },
+  computed: {
+    styled () {
+      return this.styles ? toStyle(this.styles) : ''
+    },
   },
 
   methods: {

@@ -1,36 +1,36 @@
-# WeUI for mpvue
+# MpUI (Mini-program's UI for mpvue)
 
-> WeUI-mpvue 是一套基于 WeUI 开发的 mpvue 组件库，增加了一些新的特性和组件。
+原 [weui-mpvue](https://www.npmjs.com/package/weui-mpvue)
+
+> MpUI 是一套基于 weui-wxss 开发的 mpvue 组件库，增加了一些新的特性和组件。
 > 我的目标是源于 WeUI，更胜 WeUI。
 
-[![npm version](https://img.shields.io/npm/v/weui-mpvue.svg?style=flat)](https://www.npmjs.com/package/weui-mpvue) [![npm download](https://img.shields.io/npm/dt/weui-mpvue.svg?style=flat)](https://www.npmjs.com/package/weui-mpvue) [![license](https://img.shields.io/npm/l/weui-mpvue.svg?style=flat)](https://github.com/kankungyip/weui-mpvue/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/mpui.svg?style=flat)](https://www.npmjs.com/package/mpui) [![npm download](https://img.shields.io/npm/dt/mpui.svg?style=flat)](https://www.npmjs.com/package/mpui) [![license](https://img.shields.io/npm/l/mpui.svg?style=flat)](https://github.com/kankungyip/mpui/blob/master/LICENSE)
 
 ## 说明
 
-组件库尽量以 Vue 组件形式实现，部分组件因 mpvue 尚不支持的语法而无法实现，详细见[不支持列表](http://mpvue.com/mpvue/#_14)。
+部分组件因 mpvue 尚不支持的语法而无法实现，详细见[不支持列表](http://mpvue.com/mpvue/#_14)。
+
+## 开发文档
+
+有点懒，暂时没有编写，请参考 [`example`](https://github.com/kankungyip/mpui/tree/master/example) 目录下的示例源码。
 
 ## 安装
 
 ```bash
-$ yarn add weui-mpvue
+$ yarn add mpui
 ```
 
 ## 预览
 
-```bash
-$ git clone https://github.com/kankungyip/weui-mpvue
-$ cd weui-mpvue
-$ yarn run example
-```
-
-用[微信web开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)打开`weui-mpvue`项目目录。
+![](https://mp.weixin.qq.com/wxopen/qrcode?action=show&type=2&fakeid=3834027984&token=2071919981)
 
 ## 使用
 ### 引入全局样式
 
 ```vue
-<style lang="less">
-@import "<project_dir>/node_modules/weui-mpvue/theme/weui";
+<style>
+@import "node_modules/mpui/theme/mpui.less";
 </style>
 ```
 
@@ -44,7 +44,7 @@ $ yarn run example
 </template>
 
 <script>
-import uiArticle from 'weui-mpvue/components/article'
+import uiArticle from 'mpui/components/article'
 
 export default {
   components: {
@@ -61,7 +61,7 @@ export default {
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-![](https://avatars1.githubusercontent.com/u/1096425?s=460&v=4)
+![](https://mp.weixin.qq.com/wxopen/qrcode?action=show&type=2&fakeid=3834027984&token=2071919981)
 
 ### 1.2 节标题
 
@@ -73,20 +73,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 </script>
 ```
 
-需要 Slot 支持暂未实现的组件，请使用全局样式。
+需要 Slot 支持暂未实现的组件，请使用全局样式，详细见文档。
 
 ## 组件状态
-### 新组件
-
-- [ ] `Avatar`
-- [ ] `Countdown`
-- [ ] `Counter`
-- [ ] `Ellipsis`
-- [x] `LoadingBar`
-- [ ] `NoticeBar`
-- [x] `Price`
-- [ ] `Steps`
-- [x] `Tag`
 
 _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [minui](https://github.com/meili/minui) 项目，并对其进行了必要重构以符合 WeUI 样式。_
 
@@ -94,9 +83,9 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 - [x] `Agree`
 - [x] `Button`
-- [ ] `ButtonArea`（需要 Slot 支持）
+- [ ] `ButtonArea`（需要 Slot 支持，暂使用样式）
 - [ ] `Counter`
-- [ ] `List`（需要 Slot 支持）
+- [ ] `List`（需要 Slot 支持，暂使用样式）
 - [x] `Cell`（需配合 `List` 一起使用）
 - [x] `Input`（需配合 `List` 一起使用）
 - [x] `CheckboxGroup`
@@ -110,17 +99,16 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [x] `Article`
 - [ ] `Avatar`
 - [x] `Badge`
-- [ ] `BadgeBox`（需要 Slot 支持）
+- [ ] `BadgeBox`（需要 Slot 支持，暂使用样式）
 - [ ] `Countdown`
 - [ ] `Ellipsis`
-- [ ] `Flex`（需要 Slot 支持）
-- [ ] `Row`（需要 Slot 支持）
-- [ ] `Col`（需要 Slot 支持）
+- [ ] `Row`（需要 Slot 支持，暂使用样式）
+- [ ] `Col`（需要 Slot 支持，暂使用样式）
 - [x] `Footer`
 - [x] `Grid`
 - [x] `Icons`
 - [x] `Loadmore`
-- [ ] `Panel`（需要 Slot 支持）
+- [ ] `Panel`（需要 Slot 支持，暂使用样式）
 - [x] `MediaBox`
 - [x] `Preview`
 - [x] `Price`
@@ -136,32 +124,17 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ### 导航相关
 
-- [ ] `Tabs`（需要 Slot 支持）
+- [ ] `Tabs`（需要 Slot 支持，暂使用样式）
 - [ ] `Steps`
 
 ### 搜索相关
 
 - [x] `SearchBar`
 
-## 新特性
-
-- WeUI 样式按需引用
-- `Article` 组件自动解析 markdown 格式内容，支持自定义样式：`.weui-article__TAG`
-- `Badge` 支持自定义显示最大值，超过最大值显示 max+
-- `Grid` 自持自定义列数
-- `Icons` 支持自定义图标，推荐使用 [iconfont.cn](http://iconfont.cn)
-- `LoadingBar` 引入独立 API `vm.$loading`，整合 `wx.showNavigationBarLoading`
-- `SearchBar` 实时查询结果反馈
-- `Toptips` 引入独立 API `vm.$toptips`
-- `Uploader` 整合 `wx.uploadFile`，支持中断操作和进度提示
-
 ## 计划
 
 - 为表单引入独立 API `vm.$form`，方便表单数据的获取和校验
-
-## 开发文档
-
-有点懒，暂时没有编写，请参考 [`example`](https://github.com/kankungyip/weui-mpvue/tree/master/example) 目录下的示例源码。
+- 支持 i18n
 
 ## License
 

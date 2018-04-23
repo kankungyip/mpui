@@ -1,7 +1,7 @@
 <template>
   <i
-    class="weui-icon"
-    :class="'weui-icon-' + type"
+    class="weui-icon mpui-icon"
+    :class="'weui-icon-' + type + ' mpui-icon-' + type"
     :style="styled"
     @click="click"
     />
@@ -21,7 +21,9 @@ export default {
 
   computed: {
     styled () {
-      const styles = this.styles || {}
+      const styles = {
+        ...this.styles,
+      }
       if (this.color) {
         styles.color = this.color
       }

@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.weui-icon-wechat-pay:before { content: "\e657"; }
+.mpui-icon-wechat-pay:before { content: "\e657"; }
 
-.weui-icon-github:before { content: "\e781"; }
+.mpui-icon-github:before { content: "\e781"; }
 

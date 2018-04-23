@@ -2,8 +2,8 @@
   <div class="page">
 
     <div class="page__hd">
-      <div class="page__title">WeUI-mpvue</div>
-      <div class="page__desc">WeUI-mpvue 是一套基于 WeUI 开发的 mpvue 组件库，增加了一些新的特性和样式。</div>
+      <div class="page__title">MpUI</div>
+      <div class="page__desc">MpUI (Mini-program's UI for mpvue) 是一套基于 weui-wxss 开发的 mpvue 组件库，增加了一些新的特性和样式。</div>
     </div>
 
     <div class="page__bd page__bd_spacing">
@@ -41,7 +41,7 @@
 
     <div class="page__ft">
       <ui-icon type="github" />
-      <div style="font-size:14px">github.com/kankungyip/weui-mpvue</div>
+      <div style="font-size:14px">github.com/kankungyip/mpui</div>
     </div>
 
   </div>
@@ -60,22 +60,6 @@ export default {
   data () {
     return {
       list: [
-        {
-          id: 'special',
-          name: '新组件',
-          open: false,
-          pages: [
-            'avatar*',
-            'countdown*',
-            'counter*',
-            'ellipsis*',
-            'loadingbar',
-            'noticebar*',
-            'price',
-            'steps*',
-            'tag',
-          ],
-        },
         {
           id: 'form',
           name: '表单',
@@ -106,7 +90,8 @@ export default {
             'badgebox*',
             'countdown*',
             'ellipsis*',
-            'flex*',
+            'row*',
+            'col*',
             'footer',
             'grid',
             'icons',

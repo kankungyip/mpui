@@ -1,22 +1,26 @@
 {
-  "name": "weui-mpvue",
+  "name": "mpui",
   "version": "0.7.0",
-  "description": "WeUI for mpvue",
+  "description": "Mini-program's UI for mpvue",
   "keywords": [
+    "mpui",
     "weui",
-    "mpvue"
+    "mpvue",
+    "mini-program"
   ],
   "author": "Yeqin Gong",
   "license": "MIT",
-  "homepage": "https://github.com/kankungyip/weui-mpvue",
+  "homepage": "https://github.com/kankungyip/mpui",
   "scripts": {
     "example": "node build/dev-server.js",
+    "dev": "node build/dev-server.js",
+    "docs": "docsify serve docs",
     "lint": "eslint --ext .js,.vue src"
   },
-  "main": "theme/weui.less",
+  "main": "theme/mpui.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kankungyip/weui-mpvue/"
+    "url": "https://github.com/kankungyip/mpui/"
   },
   "dependencies": {
     "md-jml": "^2.0.1",
@@ -36,6 +40,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
+    "docsify-cli": "^4.2.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -52,10 +57,10 @@
     "http-proxy-middleware": "^0.17.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
-    "mpvue": "^1.0.8",
-    "mpvue-entry": "^0.3.4",
-    "mpvue-loader": "^1.0.11",
-    "mpvue-template-compiler": "^1.0.8",
+    "mpvue": "^1.0.9",
+    "mpvue-entry": "^0.3.7",
+    "mpvue-loader": "^1.0.12",
+    "mpvue-template-compiler": "^1.0.9",
     "mpvue-webpack-target": "^1.0.0",
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
