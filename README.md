@@ -1,4 +1,5 @@
-# MpUI (Mini-program's UI for mpvue)
+MpUI (Mini-program's UI for mpvue)
+===
 
 原 [weui-mpvue](https://www.npmjs.com/package/weui-mpvue)
 
@@ -22,7 +23,13 @@ $ yarn add mpui
 
 ## 预览
 
-![](static/images/qrcode.jpg)
+```bash
+$ git clone https://github.com/kankungyip/mpui
+$ cd mpui
+$ yarn run example
+```
+
+用[微信web开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)打开 `mpui` 项目目录。
 
 ## 使用
 ### 引入全局样式
