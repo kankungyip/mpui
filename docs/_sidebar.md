@@ -7,13 +7,14 @@
 * 进阶
 
   * [自定义图标](iconfont.md)
+  * <del>事件</del>
 
 * 表单
 
   * [`Agree`](agree.md)
   * [`Button`](button.md)
   * [`ButtonArea`](buttonarea.md)
-  * `Counter`
+  * <del>`Counter`</del>
   * [`List`](list.md)
   * [`Cell`](cell.md)
   * [`Input`](input.md)
@@ -26,36 +27,36 @@
 * 基础组件
 
   * [`Article`](article.md)
-  * `Avatar`
-  * [`Badge`](badge.md)
-  * [`BadgeBox`](badgebox.md)
-  * `Countdown`
-  * `Ellipsis`
-  * [`Row`](row.md)
-  * [`Col`](col.md)
-  * [`Footer`](footer.md)
-  * [`Grid`](grid.md)
+  * <del>`Avatar`</del>
+  * <del>`Badge`</del>
+  * <del>`BadgeBox`</del>
+  * <del>`Countdown`</del>
+  * <del>`Ellipsis`</del>
+  * <del>`Row`</del>
+  * <del>`Col`</del>
+  * <del>`Footer`</del>
+  * <del>`Grid`</del>
   * [`Icons`](icons.md)
-  * [`Loadmore`](loadmore.md)
-  * [`Panel`](panel.md)
-  * [`MediaBox`](mediabox.md)
-  * [`Preview`](preview.md)
-  * [`price`](price.md)
-  * [`Progress`](progress.md)
-  * [`Tag`](tag.md)
+  * <del>`Loadmore`</del>
+  * <del>`Panel`</del>
+  * <del>`MediaBox`</del>
+  * <del>`Preview`</del>
+  * <del>`Price`</del>
+  * <del>`Progress`</del>
+  * <del>`Tag`</del>
 
 * 操作反馈
 
-  * [`LoadingBar`](loadingbar.md)
-  * [`Msg`](msg.md)
-  * `NoticeBar`
-  * [`Toptips`](toptips.md)
+  * <del>`LoadingBar`</del>
+  * <del>`Msg`</del>
+  * <del>`NoticeBar`</del>
+  * <del>`Toptips`</del>
 
 * 导航相关
 
-  * [`Tabs`](tabs.md)
-  * `Steps`
+  * <del>`Tabs`</del>
+  * <del>`Steps`</del>
 
 * 搜索相关
 
-  * [`SearchBar`](searchbar.md)
+  * <del>`SearchBar`</del>
