@@ -13,7 +13,7 @@ MpUI (Mini-program's UI for mpvue)
 
 ## 开发文档
 
-有点懒，暂时没有编写，请参考 [`example`](https://github.com/kankungyip/mpui/tree/master/example) 目录下的示例源码。
+[打开开发文档](https://kankungyip.github.io/mpui/)
 
 ## 安装
 
