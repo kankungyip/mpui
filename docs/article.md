@@ -27,6 +27,8 @@ export default {
 ### 1.1 节标题
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+![](https://avatars1.githubusercontent.com/u/1096425?s=460&v=4)
 `
     }
   }
@@ -54,3 +56,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ## 样式
 
 自定义文章段落样式，样式定义格式：`.mpui-articel__TAG`，`TAG` 是 Markdown 转换后的 HTML 标签。
+
+## 预览
+
+![](_images/article.jpg)
