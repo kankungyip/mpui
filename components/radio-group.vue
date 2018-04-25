@@ -10,7 +10,7 @@
 
       <div class="weui-cell__bd">{{item.label}}</div>
       <div v-if="item.checked" class="weui-cell__ft weui-cell__ft_in-radio">
-        <ui-icon type="success_no_circle" size="16" margin-left="3.2" margin-right="3.2" :color="color" />
+        <ui-icon type="success_no_circle" size="16" :color="color" :styles="{ marginRight: 3.2 }" />
       </div>
     </label>
   </radio-group>
@@ -38,12 +38,16 @@ export default {
   methods: {
     change (evt) {
       const items = [].concat(this.radioItems)
+      const event = evt.mp
+      const value = event.detail.value
+      event.$mp = evt
+
       for (let i = 0, len = items.length; i < len; ++i) {
-        items[i].checked = items[i].value.toString() === evt.mp.detail.value
+        items[i].checked = items[i].value.toString() === value
       }
       this.radioItems = items
       this.$emit('update:items', items)
-      this.$emit('change', evt)
+      this.$emit('change', value, event)
     },
   },
 

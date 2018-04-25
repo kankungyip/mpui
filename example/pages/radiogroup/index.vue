@@ -37,8 +37,8 @@ export default {
   },
 
   methods: {
-    change ({ mp }) {
-      console.log(`radio 携带 value 值：${mp.detail.value}`)
+    change (value, event) {
+      console.log(`radio 携带 value 值：${value}`)
     },
   },
 }

@@ -23,10 +23,12 @@ export default {
 
   methods: {
     change (evt) {
-      const checked = evt.mp.detail.value
+      const event = evt.mp
+      const checked = event.detail.value
+      event.$mp = evt
       this.switchChecked = checked
       this.$emit('update:checked', checked)
-      this.$emit('change', evt)
+      this.$emit('change', checked, event)
     },
   },
 

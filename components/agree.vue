@@ -4,8 +4,8 @@
       <div class="weui-agree__text">
         <checkbox
           class="weui-agree__checkbox"
-          value="agree"
           :id="id"
+          :value="'agree:' + id"
           :checked="agreeChecked"
           />
         <div class="weui-agree__checkbox-icon">
@@ -46,9 +46,11 @@ export default {
   methods: {
     change (evt) {
       const checked = !!evt.mp.detail.value.length
+      const event = evt.mp
+      event.$mp = evt
       this.agreeChecked = checked
       this.$emit('update:checked', checked)
-      this.$emit('change', evt)
+      this.$emit('change', checked, event)
     },
   },
 

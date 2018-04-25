@@ -9,8 +9,7 @@
         />
 
       <div class="weui-cell__hd weui-check__hd_in-checkbox">
-        <ui-icon v-if="item.checked" type="success" size="23" margin-left="4.6" margin-right="4.6" :color="color" />
-        <ui-icon v-else type="circle" size="23" margin-left="4.6" margin-right="4.6" :color="color" />
+        <ui-icon size="23" :type="item.checked ? 'success' : 'circle'" :color="color" :styles="iconStyles" />
       </div>
       <div class="weui-cell__bd">{{item.label}}</div>
     </label>
@@ -33,13 +32,21 @@ export default {
   data () {
     return {
       checkboxItems: [],
+      iconStyles: {
+        marginLeft: 4.6,
+        marginRight: 4.6,
+      }
     }
   },
 
   methods: {
     change (evt) {
       const items = [].concat(this.checkboxItems)
-      const values = evt.mp.detail.value
+
+      const event = evt.mp
+      const values = event.detail.value
+      event.$mp = evt
+
       for (var i = 0, lenI = items.length; i < lenI; ++i) {
         items[i].checked = false
 
@@ -51,7 +58,7 @@ export default {
       }
       this.checkboxItems = items
       this.$emit('update:items', items)
-      this.$emit('change', evt)
+      this.$emit('change', values, event)
     },
   },
 

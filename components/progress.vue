@@ -54,9 +54,11 @@ export default {
   },
 
   methods: {
-    cancel (...args) {
+    cancel (evt) {
+      const event = evt.mp
+      event.$mp = evt
       this.canceled = true
-      this.$emit('cancel', ...args)
+      this.$emit('cancel', event)
     },
   },
 

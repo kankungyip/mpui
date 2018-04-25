@@ -23,7 +23,7 @@
 
       <div class="weui-cells__title">文本框</div>
       <div class="weui-cells weui-cells_after-title">
-        <ui-input type="number" placeholder="请输入文本" @change="change" />
+        <ui-input placeholder="请输入文本" @change="change" />
       </div>
 
       <div class="weui-cells__title">文本域</div>
@@ -53,15 +53,15 @@ export default {
   },
 
   methods: {
-    change ({ mp }) {
-      console.log(`input 输入的新值：${mp.detail.value}`)
+    change (value, event) {
+      console.log(`input 输入的新值：${value}`)
     },
 
-    labelChange ({ mp }) {
-      console.log(`select 选择的值：${mp.detail.value}`)
+    labelChange (value, event) {
+      console.log(`select 选择的值：${value}`)
     },
 
-    vcodeClick () {
+    vcodeClick (event) {
       console.log('点击验证码')
     },
   },

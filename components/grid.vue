@@ -29,12 +29,13 @@ export default {
   },
 
   methods: {
-    click (...args) {
-      const url = this.navigateTo
-      if (url) {
-        wx.navigateTo({ url })
+    click (evt) {
+      if (this.navigateTo) {
+        wx.navigateTo({ url: this.navigateTo })
       }
-      this.$emit('click', ...args)
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', event)
     },
   },
 }

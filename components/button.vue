@@ -110,7 +110,7 @@ export default {
   },
 
   methods: {
-    click (...args) {
+    click (evt) {
       const url = this.navigateTo
       const delta = this.navigateBackDelta
 
@@ -132,23 +132,33 @@ export default {
           break
       }
 
-      this.$emit('click', ...args)
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', event)
     },
 
-    getUserInfo (...args) {
-      this.$emit('getuserinfo', ...args)
+    getUserInfo (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('getuserinfo', event)
     },
 
-    contact (...args) {
-      this.$emit('contact', ...args)
+    getPhoneNumber (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('getphonenumber', event)
     },
 
-    getPhoneNumber (...args) {
-      this.$emit('getphonenumber', ...args)
+    contact (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('contact', event)
     },
 
-    error (...args) {
-      this.$emit('error', ...args)
+    error (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('error', event)
     },
   },
 }

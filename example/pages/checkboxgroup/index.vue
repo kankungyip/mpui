@@ -37,8 +37,8 @@ export default {
   },
 
   methods: {
-    change ({ mp }) {
-      console.log(`checkbox 携带 value 值：${mp.detail.value}`)
+    change (value, event) {
+      console.log(`checkbox 携带 value 值：${value}`)
     },
   },
 }

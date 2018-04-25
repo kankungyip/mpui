@@ -94,18 +94,25 @@ export default {
 
   methods: {
     change (evt) {
-      const value = evt.mp.detail.value
+      const event = evt.mp
+      const value = event.detail.value
+      event.$mp = evt
       this.selectValue = value
       this.$emit('update:value', value)
-      this.$emit('change', evt)
+      this.$emit('change', value, event)
     },
 
-    columnChange (...args) {
-      this.$emit('columnchange', ...args)
+    columnChange (evt) {
+      const event = evt.mp
+      const { column, value } = event.detail
+      event.$mp = evt
+      this.$emit('columnchange', column, value, event)
     },
 
-    cancel (...args) {
-      this.$emit('cancel', ...args)
+    cancel (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('cancel', event)
     },
   },
 

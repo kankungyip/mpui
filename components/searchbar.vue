@@ -73,14 +73,15 @@ export default {
   },
 
   methods: {
-    typing ({ target }) {
-      this.value = target.value
-      this.$emit('realtimeresults', target.value, (results = []) => this.results = results)
+    typing (evt) {
+      const value = evt.mp.detail.value
+      this.value = value
+      this.$emit('results', value, (results = []) => this.results = results)
     },
 
     clear () {
       this.value = ''
-      this.$emit('realtimeresults', '', (results = []) => this.results = results)
+      this.$emit('results', '', (results = []) => this.results = results)
     },
 
     show () {

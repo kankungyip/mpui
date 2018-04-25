@@ -35,8 +35,10 @@ export default {
   },
 
   methods: {
-    click (...args) {
-      this.$emit('click', ...args)
+    click (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', event)
     },
   },
 }

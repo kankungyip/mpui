@@ -73,16 +73,14 @@ export default {
   },
 
   methods: {
-    change ({ mp }) {
-      console.log(`select 选择的值：${mp.detail.value}`)
+    change (value, event) {
+      console.log(`select 选择的值：${value}`)
     },
 
-    columnChange ({ mp }) {
-      const { column, value } = mp.detail
-
+    columnChange (column, value, event) {
       console.log('select 选择的列为', column, '，值为', value)
 
-      const multiArray = this.multiArray
+      const multiArray = [].concat(this.multiArray)
       const multiIndex = this.multiIndex
 
       multiIndex[column] = value
@@ -141,9 +139,9 @@ export default {
           break
       }
 
-      this.multiArray = [].concat(multiArray)
-      this.multiIndex = multiIndex
       this.multiDisplayText = multiArray[2][multiIndex[2]]
+      this.multiArray = multiArray
+      this.multiIndex = multiIndex
     },
   },
 }

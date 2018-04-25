@@ -143,39 +143,55 @@ export default {
   },
 
   methods: {
-    focus (...args) {
-      this.$emit('focus', ...args)
+    focus (evt) {
+      const event = evt.mp
+      const value = event.detail.value
+      event.$mp = evt
+      this.$emit('focus', value, event)
     },
 
     input (evt) {
-      const value = evt.mp.detail.value
+      const event = evt.mp
+      const value = event.detail.value
       this.inputValue = value
       this.$emit('update:value', value)
-      this.$emit('input', evt)
+      this.$emit('input', value, event)
     },
 
-    confirm (...args) {
-      this.$emit('confirm', ...args)
+    confirm (evt) {
+      const event = evt.mp
+      const value = event.detail.value
+      event.$mp = evt
+      this.$emit('confirm', value, event)
     },
 
-    blur (...args) {
-      this.$emit('blur', ...args)
-      this.$emit('change', ...args)
+    blur (evt) {
+      const event = evt.mp
+      const value = event.detail.value
+      event.$mp = evt
+      this.$emit('blur', value, event)
+      this.$emit('change', value, event)
     },
 
-    linechange (...args) {
-      this.$emit('linechange', ...args)
+    linechange (evt) {
+      const event = evt.mp
+      const lineCount = event.detail.lineCount
+      event.$mp = evt
+      this.$emit('linechange', lineCount, event)
     },
 
     labelchange (evt) {
-      const value = evt.mp.detail.value
+      const event = evt.mp
+      const value = event.detail.value
       this.selectIndex = value
       this.$emit('update:labelSelect', value)
-      this.$emit('labelchange', evt)
+      this.$emit('labelchange', value, event)
     },
 
-    click (...args) {
-      this.$emit('vcodeclick', ...args)
+    click (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('vcodeclick', event)
     },
   },
 

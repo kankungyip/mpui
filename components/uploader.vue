@@ -91,6 +91,7 @@ export default {
         const onProgress = (res) => {
           file.progress = res.progress
           this.$forceUpdate()
+          this.$emit('progress', res.progress)
         }
         const task = wx.uploadFile({ url, filePath, name, header, formData, success, fail })
         if (task) {

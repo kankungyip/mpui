@@ -71,12 +71,16 @@ export default {
   },
 
   methods: {
-    confirm (...args) {
-      this.$emit('confirm', ...args)
+    confirm (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('confirm', event)
     },
 
-    cancel (...args) {
-      this.$emit('cancel', ...args)
+    cancel (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('cancel', event)
     },
   },
 }

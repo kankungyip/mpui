@@ -91,18 +91,21 @@ export default {
 
   methods: {
     click (evt) {
-      const url = this.navigateTo
-      if (url) {
-        wx.navigateTo({ url })
+      if (this.navigateTo) {
+        wx.navigateTo({ url: this.navigateTo })
       }
-      this.$emit('click', evt)
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', event)
     },
 
     cellClick (index, url, evt) {
       if (url) {
         wx.navigateTo({ url })
       }
-      this.$emit('click', index, evt)
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', index, event)
     },
   },
 }
