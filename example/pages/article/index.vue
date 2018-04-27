@@ -46,9 +46,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 page {
   background-color: #fff;
 }
-.weui-article__h1,
-.weui-article__h2,
-.weui-article__h3 {
+.mpui-article__h1,
+.mpui-article__h2,
+.mpui-article__h3 {
   font-weight: bold;
   font-style: italic;
 }
