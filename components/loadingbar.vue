@@ -102,7 +102,7 @@ export default {
 
 <style lang="less" scoped>
 .loading-bar {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   top: 0;
   left: 0;
