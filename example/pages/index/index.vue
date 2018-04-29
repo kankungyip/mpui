@@ -85,7 +85,7 @@ export default {
           open: false,
           pages: [
             'article',
-            'avatar*',
+            'avatar',
             'badge',
             'badgebox*',
             'countdown*',

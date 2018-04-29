@@ -10,6 +10,9 @@ module.exports = [
     path: '/pages/article/index',
   },
   {
+    path: '/pages/avatar/index',
+  },
+  {
     path: '/pages/badge/index',
   },
   {
