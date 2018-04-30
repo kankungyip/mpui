@@ -35,8 +35,8 @@ $ yarn run example
 ### 引入全局样式
 
 ```vue
-<style>
-@import "node_modules/mpui/theme/mpui.less";
+<style lang="less">
+@import "path/to/node_modules/mpui/theme/mpui";
 </style>
 ```
 
@@ -103,11 +103,11 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ### 基础组件
 
 - [x] `Article`
-- [ ] `Avatar`
+- [x] `Avatar`
 - [x] `Badge`
 - [ ] `BadgeBox`（需要 Slot 支持，暂使用样式）
 - [ ] `Countdown`
-- [ ] `Ellipsis`
+- [x] `Ellipsis`
 - [ ] `Row`（需要 Slot 支持，暂使用样式）
 - [ ] `Col`（需要 Slot 支持，暂使用样式）
 - [x] `Footer`
