@@ -195,10 +195,15 @@ export default {
     },
   },
 
-  created () {
+  mounted () {
     this.inputValue = this.value
     this.selectIndex = this.labelSelect
-  }
+  },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
+  },
 }
 </script>
 

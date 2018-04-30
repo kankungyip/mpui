@@ -66,6 +66,7 @@ export default {
       results: [],
     }
   },
+
   computed: {
     styled () {
       return this.styles ? toStyle(this.styles) : ''
@@ -104,6 +105,11 @@ export default {
       this.$emit('resultclick', result)
       this.$emit('confirm', result.value)
     }
+  },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
   },
 }
 </script>

@@ -54,9 +54,14 @@ export default {
     },
   },
 
-  created () {
+  mounted () {
     this.agreeChecked = this.checked
-  }
+  },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
+  },
 }
 </script>
 

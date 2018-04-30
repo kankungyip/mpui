@@ -1,6 +1,6 @@
 <template>
   <div class="weui-progress">
-    <div class="weui-progress__bar">
+    <div class="weui-progress__bar" :style="styled">
       <progress
         :percent="value"
         :showInfo="showInfo"
@@ -11,13 +11,14 @@
         :active-mode="activeMode"
         />
     </div>
-    <div class="weui-progress__opr">
-      <ui-icon v-if="canCancel" type="cancel" size="22" @click="cancel" />
+    <div v-if="canCancel" class="weui-progress__opr">
+      <ui-icon type="cancel" size="22" @click="cancel" />
     </div>
   </div>
 </template>
 
 <script>
+import { string as toStyle } from 'to-style'
 import uiIcon from './icon'
 
 export default {
@@ -35,6 +36,8 @@ export default {
     backgroundColor:    { type: String,     default: '#d9d9d9' },
     active:             { type: Boolean,    default: false },
     activeMode:         { type: String,     default: 'backwards' },
+    round:              { type: Boolean,    default: false },
+    styles:             { type: Object,     default: null },
   },
 
   data () {
@@ -44,6 +47,13 @@ export default {
   },
 
   computed: {
+    styled () {
+      return toStyle({
+        borderRadius: this.strokeWidth / 2,
+        ...this.styles,
+      })
+    },
+
     value () {
       return this.canceled ? 0 : this.percent
     },
@@ -68,9 +78,18 @@ export default {
     }
     this._percent = this.percent
   },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
+  },
 }
 </script>
 
 <style lang="less" scoped>
 @import "../theme/widget/weui-progress/weui-progress";
+
+.weui-progress__bar {
+  overflow: hidden;
+}
 </style>

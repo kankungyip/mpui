@@ -8,11 +8,11 @@
     >
     <progress
       stroke-width="2"
-      active-mode="forwards"
       :percent="percent"
       :activeColor="color"
       :backgroundColor="backgroundColor"
       :active="active"
+      :active-mode="activeMode"
       />
   </div>
 </template>
@@ -23,24 +23,31 @@ import Vue from 'vue'
 let ref, timer
 
 const hide = () => {
-  ref.active = false
-  ref.hidden = true
+  clearTimeout(timer)
   wx.hideNavigationBarLoading()
+  Object.assign(ref.$data, ref.$options.data())
 }
 
 const progress = (percent) => {
   if (!ref.hidden && percent > ref.percent) {
-    ref.percent = percent
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      ref.activeMode = 'forwards'
+      ref.percent = percent
+    }, 100)
   }
 }
 
 const start = (force) => {
-  if (force || ref.hidden) {
+  if (force) {
+    hide()
+  }
+  if (ref.hidden) {
     clearTimeout(timer)
     ref.percent = 1
-    ref.active = true
     ref.hidden = false
     ref.animation = true
+    ref.active = true
     ref.color = ref.activeColor
     wx.showNavigationBarLoading()
   }
@@ -52,7 +59,7 @@ const done = () => {
     progress(100)
     ref.active = false
     ref.color = ref.successColor
-    timer = setTimeout(hide, 230)
+    timer = setTimeout(hide, 300)
   }
 }
 
@@ -62,11 +69,16 @@ const error = () => {
     progress(100)
     ref.active = false
     ref.color = ref.warnColor
-    timer = setTimeout(hide, 230)
+    timer = setTimeout(hide, 300)
   }
 }
 
 Vue.prototype['$loading'] = { start, progress, done, error, hide }
+Vue.mixin({
+  onShow () {
+    wx.hideNavigationBarLoading()
+  },
+})
 
 export default {
   props: {
@@ -78,23 +90,25 @@ export default {
 
   data () {
     return {
-      percent: 1,
+      percent: 0,
       hidden: true,
       active: true,
+      activeMode: 'backwards',
       color: '#10aeff',
       animation: false, // 进入的时候不会有消失的动画残影
     }
   },
 
-  created () {
+  mounted () {
     ref = this
     this.color = this.activeColor
   },
 
+  onShow () {
+    ref = this
+  },
+
   onUnload () {
-    // 保证小程序退出后再次进入时不会残留之前的显示
-    // 同时初始化动画选项，保证再次进入时不会有动画残影
-    ref.animation = false
     hide()
   },
 }

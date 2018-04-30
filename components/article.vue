@@ -42,10 +42,15 @@ export default {
     },
   },
 
-  created () {
+  mounted () {
     parse(this.content, {}, (node) => {
       this.nodes = [].concat(parseNode(node, 'weui-article mpui-article'))
     })
+  },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
   },
 }
 </script>

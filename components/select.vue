@@ -116,9 +116,14 @@ export default {
     },
   },
 
-  created () {
+  mounted () {
     this.selectValue = this.value
-  }
+  },
+
+  onUnload () {
+    // 重置初始数据
+    Object.assign(this.$data, this.$options.data())
+  },
 }
 </script>
 

@@ -33,7 +33,8 @@ export default {
 
   methods: {
     start () {
-      this.$loading.start()
+      this.$loading.start(true)
+      this.$loading.progress(10)
     },
 
     progress () {

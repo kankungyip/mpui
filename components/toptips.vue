@@ -19,7 +19,7 @@ let ref, timer
 
 const hide = () => {
   clearTimeout(timer)
-  ref.hidden = true
+  Object.assign(ref.$data, ref.$options.data())
 }
 
 const show = ({
@@ -53,10 +53,11 @@ export default {
     ref = this
   },
 
+  onShow () {
+    ref = this
+  },
+
   onUnload () {
-    // 保证小程序退出后再次进入时不会残留之前的显示
-    // 同时初始化动画选项，保证再次进入时不会有动画残影
-    ref.animation = false
     hide()
   },
 }
