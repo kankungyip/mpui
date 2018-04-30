@@ -25,6 +25,9 @@ module.exports = [
     path: '/pages/checkboxgroup/index',
   },
   {
+    path: '/pages/ellipsis/index',
+  },
+  {
     path: '/pages/footer/index',
   },
   {

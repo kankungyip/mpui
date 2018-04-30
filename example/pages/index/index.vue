@@ -89,7 +89,7 @@ export default {
             'badge',
             'badgebox*',
             'countdown*',
-            'ellipsis*',
+            'ellipsis',
             'row*',
             'col*',
             'footer',
