@@ -3,7 +3,7 @@
 
     <div class="page__hd">
       <div class="page__title">LoadingBar</div>
-      <div class="page__desc">顶部载入条</div>
+      <div class="page__desc">载入条</div>
     </div>
 
     <div class="page__bd">
