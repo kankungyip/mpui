@@ -26,8 +26,8 @@ export default {
   },
 
   methods: {
-    change ({ mp }) {
-      console.log(`switch 携带 value 值：${mp.detail.value}`)
+    change (checked) {
+      console.log(`switch 值：${checked}`)
     },
   },
 }
