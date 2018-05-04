@@ -7,7 +7,7 @@ Article
 
 ```vue
 <template>
-  <ui-article />
+  <ui-article :content="content" />
 </teamplate>
 
 <script>
