@@ -14,7 +14,6 @@
   * [`Agree`](agree.md)
   * [`Button`](button.md)
   * [`ButtonArea`](buttonarea.md)
-  * <del>`Counter`</del>
   * [`List`](list.md)
   * [`Cell`](cell.md)
   * [`Input`](input.md)
@@ -23,27 +22,29 @@
   * [`Select`](select.md)
   * [`Switch`](switch.md)
   * [`Uploader`](uploader.md)
+  * [`Counter`](counter.md)
 
 * 基础组件
 
+  * [`Icons`](icons.md)
   * [`Article`](article.md)
   * <del>`Avatar`</del>
   * <del>`Badge`</del>
   * <del>`BadgeBox`</del>
-  * <del>`Countdown`</del>
-  * <del>`Ellipsis`</del>
   * <del>`Row`</del>
   * <del>`Col`</del>
-  * <del>`Footer`</del>
   * <del>`Grid`</del>
-  * [`Icons`](icons.md)
-  * <del>`Loadmore`</del>
   * <del>`Panel`</del>
   * <del>`MediaBox`</del>
+  * <del>`Footer`</del>
+  * <del>`Loadmore`</del>
+  * <del>`Ellipsis`</del>
   * <del>`Preview`</del>
   * <del>`Price`</del>
   * <del>`Progress`</del>
   * <del>`Tag`</del>
+  * <del>`Timeline`</del>
+  * <del>`Countdown`</del>
 
 * 操作反馈
 
@@ -55,6 +56,7 @@
 * 导航相关
 
   * <del>`Tabs`</del>
+  * <del>`Sidenav`</del>
   * <del>`Steps`</del>
 
 * 搜索相关

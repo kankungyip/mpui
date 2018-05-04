@@ -90,36 +90,37 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 - [x] `Agree`
 - [x] `Button`
 - [ ] `ButtonArea`（需要 Slot 支持，暂使用样式）
-- [ ] `Counter`
 - [ ] `List`（需要 Slot 支持，暂使用样式）
 - [x] `Cell`（需配合 `List` 一起使用）
 - [x] `Input`（需配合 `List` 一起使用）
-- [x] `CheckboxGroup`
-- [x] `RadioGroup`
-- [x] `Select`
-- [x] `Switch`
-- [x] `Uploader`
+- [x] `CheckboxGroup`（需配合 `List` 一起使用）
+- [x] `RadioGroup`（需配合 `List` 一起使用）
+- [x] `Select`（需配合 `List` 一起使用）
+- [x] `Switch`（需配合 `List` 一起使用）
+- [x] `Uploader`（可配合 `List` 一起使用）
+- [x] `Counter`（可配合 `List` 一起使用）
 
 ### 基础组件
 
+- [x] `Icons`
 - [x] `Article`
 - [x] `Avatar`
 - [x] `Badge`
 - [ ] `BadgeBox`（需要 Slot 支持，暂使用样式）
-- [ ] `Countdown`
-- [x] `Ellipsis`
 - [ ] `Row`（需要 Slot 支持，暂使用样式）
 - [ ] `Col`（需要 Slot 支持，暂使用样式）
-- [x] `Footer`
 - [x] `Grid`
-- [x] `Icons`
-- [x] `Loadmore`
 - [ ] `Panel`（需要 Slot 支持，暂使用样式）
-- [x] `MediaBox`
+- [x] `MediaBox`（可配合 `Panel` 一起使用）
+- [x] `Footer`
+- [x] `Loadmore`
+- [x] `Ellipsis`
 - [x] `Preview`
 - [x] `Price`
 - [x] `Progress`
 - [x] `Tag`
+- [ ] `Timeline`
+- [ ] `Countdown`
 
 ### 操作反馈
 
@@ -131,6 +132,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 ### 导航相关
 
 - [ ] `Tabs`（需要 Slot 支持，暂使用样式）
+- [ ] `Sidenav`
 - [ ] `Steps`
 
 ### 搜索相关
@@ -139,8 +141,8 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 ## 计划
 
-- 为表单引入独立 API `vm.$form`，方便表单数据的获取和校验
-- 支持 i18n
+- [ ] 为表单引入独立 API `vm.$form`，方便表单数据的获取和校验
+- [ ] 支持 i18n
 
 ## License
 
