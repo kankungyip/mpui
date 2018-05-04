@@ -1,6 +1,6 @@
 <template>
-  <div :class="{ 'weui-cell': !indie }">
-    <div :class="{ 'weui-cell__bd': !indie }">
+  <div :class="{ 'weui-cell': incell }">
+    <div :class="{ 'weui-cell__bd': incell }">
       <div class="weui-uploader">
         <div class="weui-uploader__hd">
           <div class="weui-uploader__title">{{title}}</div>
@@ -49,7 +49,7 @@ export default {
     name:         { type: String,     default: 'uploads' },
     header:       { type: Object,     default: null },
     formData:     { type: Object,     default: null },
-    indie:        { type: Boolean,    default: false },
+    incell:       { type: Boolean,    default: false },
   },
 
   data () {

@@ -8,7 +8,7 @@
 
     <div class="page__bd">
       <div class="weui-cells">
-        <ui-uploader title="图片上传" />
+        <ui-uploader title="图片上传" incell />
       </div>
     </div>
 
