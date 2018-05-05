@@ -40,15 +40,23 @@ export default {
   },
 
   props: {
-    current: { type: Number, default: 0 },
-    finish: { type: Boolean, default: false },
-    items: { type: Array, default: [] },
-    color: { type: String, default: '#e5e5e5' },
-    activeColor: { type: String, default: '#10aeff' },
-    iconSize: { type: Number, default: 30 },
+    current:      { type: Number,   default: 0 },
+    finish:       { type: Boolean,  default: false },
+    items:        { type: Array,    default: [] },
+    color:        { type: String,   default: '#e5e5e5' },
+    activeColor:  { type: String,   default: '#10aeff' },
+    iconSize:     { type: Number,   default: 30 },
+    // fixed: style
+    styles:       { type: Object,   default: null },
   },
 
   computed: {
+    styled () {
+      return toStyle({
+        ...this.styles,
+      })
+    },
+
     iconStyled () {
       return toStyle({
         marginTop: this.iconSize / 2,
