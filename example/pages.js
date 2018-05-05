@@ -79,6 +79,9 @@ module.exports = [
     path: '/pages/select/index',
   },
   {
+    path: '/pages/steps/index',
+  },
+  {
     path: '/pages/switch/index',
   },
   {

@@ -57,7 +57,7 @@
 
   * <del>`Tabs`</del>
   * <del>`Sidenav`</del>
-  * <del>`Steps`</del>
+  * [`Steps`](steps.md)
 
 * 搜索相关
 

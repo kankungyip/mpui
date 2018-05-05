@@ -123,7 +123,7 @@ export default {
           pages: [
             'tabs*',
             'sidenav*',
-            'steps*',
+            'steps',
           ],
         },
         {
