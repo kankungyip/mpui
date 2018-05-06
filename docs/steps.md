@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       items: [
-        { label: '步骤1', icon: "watting" },
+        { label: '步骤1', icon: "waiting" },
         { label: '步骤1', icon: "success" }
       ]
     }
