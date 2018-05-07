@@ -48,7 +48,7 @@
 
 * 操作反馈
 
-  * <del>`LoadingBar`</del>
+  * [`LoadingBar`](loadingbar.md)
   * <del>`Msg`</del>
   * <del>`NoticeBar`</del>
   * <del>`Toptips`</del>
