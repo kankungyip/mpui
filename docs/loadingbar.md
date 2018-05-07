@@ -3,7 +3,7 @@ LoadingBar
 
 载入进度条
 
-!> 可使用 `load.css` 全部载入样式
+!> 可使用 [`loaders.css`](https://github.com/ConnorAtherton/loaders.css) 全部载入样式
 
 ## 使用
 
