@@ -7,7 +7,7 @@
     </div>
 
     <div class="page__bd">
-      <ui-grid :grids="grids" />
+      <ui-grid :items="grids" />
     </div>
 
   </div>
@@ -25,40 +25,40 @@ export default {
     return {
       grids: [
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
         {
-          icon: '/static/images/icon_tabbar.png',
           label: 'Grid',
+          image: '/static/images/icon_tabbar.png',
         },
       ],
     }
