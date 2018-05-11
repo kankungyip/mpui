@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar" :style="styled">
+  <div class="avatar" :style="styled" @click="click">
     <img
       v-if="image"
       v-show="imageLoaded"
@@ -77,6 +77,12 @@ export default {
   methods: {
     load () {
       this.imageLoaded = true
+    },
+
+    click (evt) {
+      const event = evt.mp
+      event.$mp = evt
+      this.$emit('click', event)
     },
   }
 }
