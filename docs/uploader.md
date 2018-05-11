@@ -13,10 +13,10 @@ Uploader
 
   <!-- Slot 替代方案 -->
   <div class="weui-cells">
-    <ui-uploader title="图片上传" />
+    <ui-uploader title="图片上传" incell />
   </div>
 
-  <ui-uploader title="图片上传" indie />
+  <ui-uploader title="图片上传" />
 </teamplate>
 
 <script>
@@ -44,7 +44,7 @@ export default {
 | name | String | `uploads` | 文件对应的 `key`，开发者在服务器端通过这个 `key` 可以获取到文件二进制内容 |
 | header | Object |   | HTTP 请求 Header, header 中不能设置 Referer |
 | form-data | Object |   | HTTP 请求中其他额外的 `formData` |
-| indie | Boolean | `false` | 使用独立模式，在 `<ui-list>` 之外使用 |
+| incell | Boolean | `false` | 是否使用显示在列表中的样式 |
 
 ## 事件
 

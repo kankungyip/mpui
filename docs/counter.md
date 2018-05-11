@@ -8,12 +8,12 @@ Counter
 ```vue
 <template>
   <!-- <ui-list>   暂未支持 Slot 语法
-    <ui-counter label="标题文字" @change="change" />
+    <ui-counter label="标题文字" incell @change="change" />
   </ui-list> -->
   
   <!-- Slot 替代方案 -->
   <div class="weui-cells">
-    <ui-counter label="标题文字" @change="change" />
+    <ui-counter label="标题文字" incell @change="change" />
   </div>
 </teamplate>
 
