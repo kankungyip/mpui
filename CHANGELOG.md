@@ -1,3 +1,12 @@
+#### v0.10.0 (2018-05-10)
+
+- [添加] 多个组件文档
+- [添加] `Steps` 组件
+- [添加] `Counter` 组件
+- [优化] `Grid` 组件属性调整
+- [优化] 为 `LoadingBar` 组件增加 [`loaders.css`](https://github.com/ConnorAtherton/loaders.css) 样式
+- [其他] 升级 mpvue 1.0.10 等开发库
+
 #### v0.9.0 (2018-04-30)
 
 添加开发文档
