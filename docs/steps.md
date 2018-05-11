@@ -38,5 +38,5 @@ export default {
 | finish | Boolean | `false` | 完成所有步骤，等同与 `current=(items.length - 1)` |
 | items | Array[Object] |   | 步骤数据，`[{ icon, label }]` |
 | color | String | `#e5e5e5` | 未完成的步骤的颜色 |
-| activeColor | String | `#10aeff` | 完成的步骤的颜色 |
-| iconSize | Number | `30` | 图标的尺寸，仅当步骤数据中设置了 `icon` 时，才有效
+| active-color | String | `#10aeff` | 完成的步骤的颜色 |
+| icon-size | Number | `30` | 图标的尺寸，仅当步骤数据中设置了 `icon` 时，才有效

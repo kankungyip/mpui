@@ -28,12 +28,12 @@ export default {
 | 属性 | 类型 | 默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | type | String | `progress-bar` | 进度条类型，可选值：`progress-bar`,, `ball-pulse`, `ball-grid-pulse`, `ball-clip-rotate`, `ball-clip-rotate-pulse`, `square-spin`, `ball-clip-rotate-multiple`, `ball-pulse-rise`, `ball-rotate`, `cube-transition`, `ball-zig-zag`, `ball-zig-zag-deflect`, `ball-triangle-path`, `ball-scale`, `line-scale`, `line-scale-party`, `ball-scale-multiple`, `ball-pulse-sync`, `ball-beat`, `line-scale-pulse-out`, `line-scale-pulse-out-rapid`, `ball-scale-ripple`, `ball-scale-ripple-multiple`, `ball-spin-fade-loader`, `line-spin-fade-loader`, `triangle-skew-spin`, `pacman`, `semi-circle-spin`, `ball-grid-beat`, `ball-scale-random` |
-| backgroundColor | String | `#d9d9d9` | `type=progress-bar`时，进度条背景颜色 |
-| activeColor | String | `#10aeff` | 载入时，进度条的颜色 |
-| successColor | String | `#09bb07` | 载入完成时，进度条的颜色 |
-| warnColor | String | `#f43530` | 发生错误时，进度条的颜色 |
+| background-color | String | `#d9d9d9` | `type=progress-bar`时，进度条背景颜色 |
+| active-color | String | `#10aeff` | 载入时，进度条的颜色 |
+| success-color | String | `#09bb07` | 载入完成时，进度条的颜色 |
+| warn-color | String | `#f43530` | 发生错误时，进度条的颜色 |
 | mask | Boolean | `false` | 是否使用遮罩 |
-| maskColor | String | `rgba(0, 0, 0, 0.4)` | 遮罩的颜色 |
+| mask-color | String | `rgba(0, 0, 0, 0.4)` | 遮罩的颜色 |
 
 ## API
 

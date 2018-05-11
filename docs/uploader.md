@@ -37,13 +37,13 @@ export default {
 | 属性 | 类型 | 默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | title | String |   | 上传组件显示的标题 |
-| filesLimit | Number | `9` | 限制最大文件数量 |
-| sizeType | Array | `['original', 'compressed']` | 允许上传尺寸，`original` 原图，`compressed` 压缩图 |
-| sourceType | Array | `['album', 'camera']` | 允许图片来源，`album` 从相册选图，`camera` 使用相机 |
+| files-limit | Number | `9` | 限制最大文件数量 |
+| size-type | Array | `['original', 'compressed']` | 允许上传尺寸，`original` 原图，`compressed` 压缩图 |
+| source-type | Array | `['album', 'camera']` | 允许图片来源，`album` 从相册选图，`camera` 使用相机 |
 | url | String |   | 上传服务器的 `url` |
 | name | String | `uploads` | 文件对应的 `key`，开发者在服务器端通过这个 `key` 可以获取到文件二进制内容 |
 | header | Object |   | HTTP 请求 Header, header 中不能设置 Referer |
-| formData | Object |   | HTTP 请求中其他额外的 `formData` |
+| form-data | Object |   | HTTP 请求中其他额外的 `formData` |
 | indie | Boolean | `false` | 使用独立模式，在 `<ui-list>` 之外使用 |
 
 ## 事件

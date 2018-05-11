@@ -28,12 +28,12 @@
 
   * [`Icons`](icons.md)
   * [`Article`](article.md)
-  * <del>`Avatar`</del>
-  * <del>`Badge`</del>
-  * <del>`BadgeBox`</del>
+  * [`Avatar`](avatar.md)
+  * [`Badge`](badge.md)
+  * [`BadgeBox`](badgebox.md)
   * <del>`Row`</del>
   * <del>`Col`</del>
-  * <del>`Grid`</del>
+  * [`Grid`](grid.md)
   * <del>`Panel`</del>
   * <del>`MediaBox`</del>
   * <del>`Footer`</del>
@@ -61,4 +61,4 @@
 
 * 搜索相关
 
-  * <del>`SearchBar`</del>
+  * [`SearchBar`](searchbar.md)

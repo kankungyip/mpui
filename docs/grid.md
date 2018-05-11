@@ -42,7 +42,7 @@ export default {
 | 属性 | 类型 | 默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | items | Array[Object] |   | 九宫格数据，`[{ label, image, icon, value }]`，同时设置了 `image` 和 `icon` 将不会显示 `icon` |
-| iconSize | Number | `28` | 图标或图像的尺寸 |
+| icon-size | Number | `28` | 图标或图像的尺寸 |
 | column | Number | `3` | 每行显示的列数 |
 | border | Boolean | `false` | 是否显示边框 |
 
