@@ -205,6 +205,9 @@ export default {
   },
 
   mounted () {
+    if (ref) {
+      hide()
+    }
     ref = this
     this.color = this.activeColor
     this.loaderType = this.type
@@ -217,6 +220,9 @@ export default {
   },
 
   onShow () {
+    if (ref) {
+      hide()
+    }
     ref = this
   },
 

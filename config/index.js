@@ -7,7 +7,8 @@ function resolve (dir) {
 
 module.exports = {
   alias: {
-    '@': resolve('example')
+    '@': resolve('example'),
+    'mpui': resolve('.'),
   },
   build: {
     env: require('./prod.env'),

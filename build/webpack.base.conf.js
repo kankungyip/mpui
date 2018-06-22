@@ -1,5 +1,5 @@
 var path = require('path')
-var genEntry = require('mpvue-entry')
+var MpvueEntry = require('mpvue-entry')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -10,7 +10,10 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: genEntry('./example/pages.js', './example/main.js'),
+  entry: MpvueEntry.getEntry({
+    pages: './example/pages.js',
+    template: './example/main.js',
+  }),
   target: require('mpvue-webpack-target'),
   output: {
     path: config.build.assetsRoot,
@@ -42,10 +45,9 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve('example'), resolve('node_modules/mpvue-entry')],
+        include: [resolve('example')],
         use: [
-          'babel-loader',
-          {
+          'babel-loader', {
             loader: 'mpvue-loader',
             options: {
               checkMPEntry: true
@@ -80,6 +82,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new MpvuePlugin()
+    new MpvuePlugin(),
+    new MpvueEntry(),
   ]
 }

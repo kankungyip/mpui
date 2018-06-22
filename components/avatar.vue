@@ -94,6 +94,7 @@ export default {
 .avatar {
   display: inline-block;
   background: @weuiTextColorGray;
+  vertical-align: middle;
   border-radius: 50%;
   overflow: hidden;
   color: #fff;

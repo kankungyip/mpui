@@ -15,13 +15,13 @@
     <div class="numbers" :class="{ del: status === 'del' }">
       <span
         class="integer"
-        :class="{ 'no-strong': size < decimalSize }"
+        :class="{ 'no-strong': size < decimalSizeVaule }"
         >{{integerValue}}</span>
       <span
         v-if="showDecimal"
         class="decimal"
-        :class="{ 'no-strong': decimalSize && decimalSize < size }"
-        :style="'font-size:' + (decimalSize || size) + 'px'"
+        :class="{ 'no-strong': decimalSizeVaule < size }"
+        :style="'font-size:' + decimalSizeVaule + 'px'"
         >{{decimalValue}}</span>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {
     symbol:       { type: String,   default: '¥' },
     symbolStyle:  { type: String,   default: null },
     decimal:      { type: [Number, String], default: 2 },
-    decimalSize:  { type: Number,   default: 0 },
+    decimalSize:  { type: [Number, String], default: 0 },
   },
 
   computed: {
@@ -71,6 +71,10 @@ export default {
       }
       return decimal.substr(0, +this.decimal === 1 ? 1 : 2)
     },
+
+    decimalSizeVaule () {
+      return this.decimalSize === 'mini' ? (this.size * 0.7) : (this.decimalSize || this.size)
+    }
   },
 }
 </script>

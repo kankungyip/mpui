@@ -24,7 +24,7 @@
       @click="click"
       >
       <div v-if="image" class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-        <img class="weui-media-box__thumb" :src="image" />
+        <img class="weui-media-box__thumb" mode="aspectFill" :src="image" />
       </div>
       <div
         class="weui-media-box__bd"

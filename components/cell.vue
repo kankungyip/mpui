@@ -25,6 +25,7 @@
         </div>
       </div>
       <div class="weui-cell__bd" :class="{ 'weui-cell_primary': image }">
+        <ui-icon v-if="!image" size="auto" :type="icon" :styles="{ marginRight: 5 }" />
         <div class="title">{{title}}</div>
         <ui-badge
           v-if="badgePosition === 'title' && badgeText"
@@ -43,16 +44,19 @@
 <script>
 import { string as toStyle } from 'to-style'
 import uiBadge from './badge'
+import uiIcon from './icon'
 
 export default {
   components: {
     uiBadge,
+    uiIcon,
   },
 
   props: {
     type:             { type: String,     default: 'default' },
     title:            { type: String,     default: '' },
     extra:            { type: String,     default: '' },
+    icon:             { type: String,     default: '' },
     image:            { type: String,     default: '' },
     imageWidth:       { type: Number,     default: 20 },
     imageHeight:      { type: Number,     default: 20 },
