@@ -133,7 +133,7 @@ _部分组件样式源自 [zanui](https://github.com/youzan/zanui-weapp) 和 [mi
 
 - [ ] `Tabs`（需要 Slot 支持，暂使用样式）
 - [ ] `Sidenav`
-- [ ] `Steps`
+- [x] `Steps`
 
 ### 搜索相关
 
